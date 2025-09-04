@@ -1,1054 +1,402 @@
-mixed-port: 7890
+port: 7890
+socks-port: 7891
+mixed-port: 7893
 allow-lan: false
-mode: rule
+mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-
-  - name: "SS-1"
-    type: ss
-    server: series-a1.samanehha.co
-    port: 443
-    cipher: chacha20-ietf-poly1305
-    password: Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpXNzRYRkFMTEx1dzZtNUlB
-
-  - name: "TROJAN-1"
-    type: trojan
-    server: 172.67.181.173
-    port: 443
-    password: f282b878-8711-45a1-8c69-5564172123c1
-    sni: vpn.stupidworld.web.id
-    skip-cert-verify: true
-    udp: true
-    network: ws
-    ws-opts:
-      path: "['/Tel---MTMVPN---MTMVPN---MTMVPN']"
-      headers:
-        Host: "['vpn.stupidworld.web.id']"
-
-  - name: "SS-2"
-    type: ss
-    server: admin.c2.webramz.co
-    port: 443
-    cipher: chacha20-ietf-poly1305
-    password: Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpXc3R1U25sdTRpZUE5TTBM
-
-  - name: "VLESS-1"
-    type: vless
-    server: statue.lnmarketplace.net
-    port: 443
-    uuid: 7c63f43f-f526-49bb-b5c8-2be26e11ef00
-    tls: true
-    udp: true
-    network: xhttp
-    encryption: none
-    skip-cert-verify: true
-    client-fingerprint: chrome
-    servername: statue.lnmarketplace.net
-    http-opts:
-      path: ["/statue"]
-      headers:
-        Host: ["['statue.lnmarketplace.net']"]
-
-  - name: "VLESS-2"
-    type: vless
-    server: 172.66.40.99
-    port: 443
-    uuid: telegram-id-Arfilter
-    tls: true
-    udp: true
-    network: ws
-    encryption: none
-    skip-cert-verify: true
-    client-fingerprint: firefox
-    servername: eDg.SpEeDtEsT2029.CoM
-    ws-opts:
-      path: "/telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray?ed=2048"
-      headers:
-        Host: "eDg.SpEeDtEsT2029.CoM"
-
-  - name: "VLESS-3"
-    type: vless
-    server: www.bankonbasak.com
-    port: 443
-    uuid: 30f2d443-af46-4dd6-83c9-b5e17299ebd2
-    tls: true
-    udp: true
-    network: ws
-    encryption: none
-    skip-cert-verify: true
-    client-fingerprint: random
-    servername: carlotta.shoorekeeper.cloudns.org
-    ws-opts:
-      path: "/proxyip=zani.yaemiko.ggff.net"
-      headers:
-        Host: "carlotta.shoorekeeper.cloudns.org"
-
-  - name: "SS-3"
-    type: ss
-    server: 77.105.166.12
-    port: 8594
-    cipher: chacha20-ietf-poly1305
-    password: Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTptU1FpdVQ1alIxN255V2djWE9QclRX
-
-  - name: "VLESS-4"
-    type: vless
-    server: famous-experience.seotoolsforyou.co.uk
-    port: 80
-    uuid: 7f09e7b4-4680-4653-a2da-307d110b6961
-    tls: false
-    udp: true
-    network: ws
-    encryption: none
-    skip-cert-verify: true
-    client-fingerprint: chrome
-    servername: famous-experience.seotoolsforyou.co.uk
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "famous-experience.seotoolsforyou.co.uk"
-
-  - name: "SS-4"
-    type: ss
-    server: series-a2.samanehha.co
-    port: 443
-    cipher: chacha20-ietf-poly1305
-    password: Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTptcHMzRndtRGpMcldhT1Zn
-
-  - name: "SS-5"
-    type: ss
-    server: series-a2.varzesh360.co
-    port: 443
-    cipher: chacha20-ietf-poly1305
-    password: Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTptcHMzRndtRGpMcldhT1Zn
-
-  - name: "VMESS-1"
-    type: vmess
-    server: 91.107.243.150
-    port: 32017
-    uuid: c0ccdeb9-784c-4d67-b904-20dcaac9902a
-    alterId: 0
-    cipher: auto
-    network: tcp
-    tls: false
-
-  - name: "SS-6"
-    type: ss
-    server: freakconfig13.felafel.org
-    port: 443
-    cipher: chacha20-ietf-poly1305
-    password: 1xO2cqPazqjGfCfd
-
-  - name: "VLESS-5"
-    type: vless
-    server: wild-bird.seotoolsforyou.co.uk
-    port: 80
-    uuid: 1d0dfde1-9f18-4557-9af8-4f3124ee5dcd
-    tls: false
-    udp: true
-    network: ws
-    encryption: none
-    skip-cert-verify: true
-    client-fingerprint: chrome
-    servername: wild-bird.seotoolsforyou.co.uk
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "wild-bird.seotoolsforyou.co.uk"
-
-  - name: "VLESS-6"
-    type: vless
-    server: 172.67.204.84
-    port: 443
-    uuid: d8c37e7f-61d2-4a58-87c9-b8452155c207
-    tls: true
-    udp: true
-    network: ws
-    encryption: none
-    skip-cert-verify: true
-    client-fingerprint: chrome
-    servername: rOk-CREator.PAgeS.dEv
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "rOk-CREator.PAgeS.dEv"
-
-  - name: "VLESS-7"
-    type: vless
-    server: vpn_proxy_channel_vpn_proxy_channel.hohod.ir
-    port: 443
-    uuid: 1584806e-f63d-4f9b-a0b3-abe64b35a09c
-    tls: false
-    udp: true
-    network: tcp
-    encryption: none
-    skip-cert-verify: true
-    client-fingerprint: chrome
-    servername: vpn_proxy_channel_vpn_proxy_channel.hohod.ir
-
-  - name: "VLESS-8"
-    type: vless
-    server: privasi.turah.my.id
-    port: 443
-    uuid: 0fbf4f81-2598-4b6a-a623-0ead4cb9efa8
-    tls: true
-    udp: true
-    network: ws
-    encryption: none
-    skip-cert-verify: true
-    client-fingerprint: chrome
-    servername: privasi.turah.my.id
-    ws-opts:
-      path: "/Free-CF-Proxy-AD192.3.113.4-19318"
-      headers:
-        Host: "privasi.turah.my.id"
-
-  - name: "VLESS-9"
-    type: vless
-    server: ru01-vlr01.tcp-reset-club.net
-    port: 443
-    uuid: 2a02cb25-0f58-4b19-a7a6-8c205fdb9042
-    tls: false
-    udp: true
-    network: tcp
-    encryption: none
-    skip-cert-verify: true
-    client-fingerprint: chrome
-    servername: hls-svod.itunes.apple.com
-    flow: xtls-rprx-vision
-
-  - name: "VLESS-10"
-    type: vless
-    server: 104.27.62.243
-    port: 443
-    uuid: 3c36eadb-747a-4166-8db0-23fec9883ea2
-    tls: true
-    udp: true
-    network: ws
-    encryption: none
-    skip-cert-verify: true
-    client-fingerprint: firefox
-    servername: HarmonY-427.pages.DEV
-    ws-opts:
-      path: "/?ed=2048"
-      headers:
-        Host: "HarmonY-427.pages.DEV"
-
-  - name: "VLESS-11"
-    type: vless
-    server: elegant-corporation.seotoolsforyou.co.uk
-    port: 80
-    uuid: d03d8815-a06f-408f-a62f-6c84869b96a9
-    tls: false
-    udp: true
-    network: ws
-    encryption: none
-    skip-cert-verify: true
-    client-fingerprint: chrome
-    servername: elegant-corporation.seotoolsforyou.co.uk
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "elegant-corporation.seotoolsforyou.co.uk"
-
-  - name: "VLESS-12"
-    type: vless
-    server: 45.80.229.254
-    port: 58258
-    uuid: f73d8952-81f2-4bac-b6c4-d81348f282ef
-    tls: false
-    udp: true
-    network: tcp
-    encryption: none
-    skip-cert-verify: true
-    client-fingerprint: chrome
-    servername: yahoo.com
-
-  - name: "VLESS-13"
-    type: vless
-    server: 172.66.47.175
-    port: 2083
-    uuid: 4d794980-54c0-4fcb-8def-c2beaecadbad
-    tls: true
-    udp: true
-    network: ws
-    encryption: none
-    skip-cert-verify: true
-    client-fingerprint: chrome
-    servername: azadnet05.pages.dev
-    ws-opts:
-      path: "/lZU7WqWIDqC1jRn6?ed=2560"
-      headers:
-        Host: "azadnet05.pages.dev"
-
-  - name: "SS-7"
-    type: ss
-    server: admin.c1.webramz.co
-    port: 443
-    cipher: chacha20-ietf-poly1305
-    password: 1xO2cqPazqjGfCfd
-
-  - name: "VLESS-14"
-    type: vless
-    server: www.ums.id
-    port: 443
-    uuid: 30f2d443-af46-4dd6-83c9-b5e17299ebd2
-    tls: true
-    udp: true
-    network: ws
-    encryption: none
-    skip-cert-verify: true
-    client-fingerprint: randomized
-    servername: carlotta.shoorekeeper.cloudns.org
-    ws-opts:
-      path: "/proxyip=zani.yaemiko.ggff.net"
-      headers:
-        Host: "carlotta.shoorekeeper.cloudns.org"
-
-  - name: "SS-8"
-    type: ss
-    server: series-a2-mec.samanehha.co
-    port: 443
-    cipher: chacha20-ietf-poly1305
-    password: u17T3BvpYaaiuW2c
-
-  - name: "SS-9"
-    type: ss
-    server: series-a2-mec.varzesh360.co
-    port: 443
-    cipher: chacha20-ietf-poly1305
-    password: u17T3BvpYaaiuW2c
-
-  - name: "VLESS-15"
-    type: vless
-    server: ipw.gfdv54cvghhgfhgj-njhgj64.info
-    port: 2096
-    uuid: e999db7a-1b17-4da6-bc37-c9fa24af2e93
-    tls: true
-    udp: true
-    network: ws
-    encryption: none
-    skip-cert-verify: true
-    client-fingerprint: chrome
-    servername: E4aRpUi7Xe.GiTi4.OrG
-    ws-opts:
-      path: "/?ed=2048@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn"
-      headers:
-        Host: "E4aRpUi7Xe.GiTi4.OrG"
-
-  - name: "VLESS-16"
-    type: vless
-    server: ru01-vlr01.tcp-reset-club.net
-    port: 443
-    uuid: c28dfe26-a1cd-4ebf-b427-7b44f8c2f7e0
-    tls: false
-    udp: true
-    network: tcp
-    encryption: none
-    skip-cert-verify: true
-    client-fingerprint: chrome
-    servername: hls-svod.itunes.apple.com
-    flow: xtls-rprx-vision
-
-  - name: "VLESS-17"
-    type: vless
-    server: www.speedtest.net
-    port: 8080
-    uuid: 6be09091-9322-425e-b2ad-2b67fbd55044
-    tls: false
-    udp: true
-    network: ws
-    encryption: none
-    skip-cert-verify: true
-    client-fingerprint: chrome
-    servername: WWW.dollardoon.com
-    ws-opts:
-      path: "/@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7?ed=2048"
-      headers:
-        Host: "WWW.dollardoon.com"
-
-  - name: "SS-10"
-    type: ss
-    server: admin.c2.havij.co
-    port: 443
-    cipher: chacha20-ietf-poly1305
-    password: AcGFEsMR6c07Txux
-
-  - name: "VLESS-18"
-    type: vless
-    server: 104.26.15.69
-    port: 2096
-    uuid: 30f2d443-af46-4dd6-83c9-b5e17299ebd2
-    tls: true
-    udp: true
-    network: ws
-    encryption: none
-    skip-cert-verify: true
-    client-fingerprint: randomized
-    servername: carlotta.shoorekeeper.cloudns.org
-    ws-opts:
-      path: "/proxyip=zani.yaemiko.ggff.net"
-      headers:
-        Host: "carlotta.shoorekeeper.cloudns.org"
-
-  - name: "VLESS-19"
-    type: vless
-    server: 5.75.198.47
-    port: 443
-    uuid: 1584806e-f63d-4f9b-a0b3-abe64b35a09c
-    tls: false
-    udp: true
-    network: tcp
-    encryption: none
-    skip-cert-verify: true
-    client-fingerprint: chrome
-    servername: vpn_proxy_channel_vpn_proxy_channel.hohod.ir
-
-  - name: "VLESS-20"
-    type: vless
-    server: famous-experience.seotoolsforyou.co.uk
-    port: 80
-    uuid: 7f09e7b4-4680-4653-a2da-307d110b6961
-    tls: false
-    udp: true
-    network: ws
-    encryption: none
-    skip-cert-verify: true
-    client-fingerprint: chrome
-    servername: famous-experience.seotoolsforyou.co.uk
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "famous-experience.seotoolsforyou.co.uk"
-
-  - name: "VLESS-21"
-    type: vless
-    server: brainy-party.seotoolsforyou.co.uk
-    port: 80
-    uuid: 34797f17-09a1-400c-9f4b-275718d62a0f
-    tls: false
-    udp: true
-    network: ws
-    encryption: none
-    skip-cert-verify: true
-    client-fingerprint: chrome
-    servername: brainy-party.seotoolsforyou.co.uk
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "brainy-party.seotoolsforyou.co.uk"
-
-  - name: "VLESS-22"
-    type: vless
-    server: wonderful-degree.seotoolsforyou.co.uk
-    port: 80
-    uuid: 6192c1d9-5ae1-40ba-9cbb-cfacc2f8533c
-    tls: false
-    udp: true
-    network: ws
-    encryption: none
-    skip-cert-verify: true
-    client-fingerprint: chrome
-    servername: wonderful-degree.seotoolsforyou.co.uk
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "wonderful-degree.seotoolsforyou.co.uk"
-
-  - name: "VLESS-23"
-    type: vless
-    server: 45.80.230.190
-    port: 65076
-    uuid: 655a6618-4d41-46e8-a8e1-9e9f47798985
-    tls: false
-    udp: true
-    network: tcp
-    encryption: none
-    skip-cert-verify: true
-    client-fingerprint: randomized
-    servername: stackoverflow.com
-
-  - name: "VLESS-24"
-    type: vless
-    server: est01-vlr01.tcp-reset-club.net
-    port: 443
-    uuid: 2a02cb25-0f58-4b19-a7a6-8c205fdb9042
-    tls: false
-    udp: true
-    network: tcp
-    encryption: none
-    skip-cert-verify: true
-    client-fingerprint: chrome
-    servername: hls-svod.itunes.apple.com
-    flow: xtls-rprx-vision
-
-  - name: "SS-11"
-    type: ss
-    server: 78.153.131.96
-    port: 443
-    cipher: chacha20-ietf-poly1305
-    password: Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3anZISEY1U2FGb2I%3D
-
-  - name: "VLESS-25"
-    type: vless
-    server: s2.1dnt.k-l.cloud
-    port: 80
-    uuid: f353fbf3-b6a1-4524-b916-f65bc077511f
-    tls: false
-    udp: true
-    network: xhttp
-    encryption: none
-    skip-cert-verify: true
-    client-fingerprint: chrome
-    servername: s2.1dnt.k-l.cloud
-    http-opts:
-      path: ["/123"]
-      headers:
-        Host: ["['s2.1dnt.k-l.cloud']"]
-
-  - name: "VLESS-26"
-    type: vless
-    server: 25.129.199.251
-    port: 8880
-    uuid: 0132166f-e702-48ed-a9e7-b07af768faf8
-    tls: false
-    udp: true
-    network: ws
-    encryption: none
-    skip-cert-verify: true
-    client-fingerprint: chrome
-    servername: cf.d3z.net
-    ws-opts:
-      path: "/Telegram🇨🇳 @WangCai2 /?ed=2560"
-      headers:
-        Host: "cf.d3z.net"
-
-  - name: "VLESS-27"
-    type: vless
-    server: s5.1dnt.k-l.cloud
-    port: 80
-    uuid: f353fbf3-b6a1-4524-b916-f65bc077511f
-    tls: false
-    udp: true
-    network: xhttp
-    encryption: none
-    skip-cert-verify: true
-    client-fingerprint: chrome
-    servername: s5.1dnt.k-l.cloud
-    http-opts:
-      path: ["/123?ed=2048@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn"]
-      headers:
-        Host: ["['s5.1dnt.k-l.cloud']"]
-
-  - name: "SS-12"
-    type: ss
-    server: 92.38.171.215
-    port: 31348
-    cipher: chacha20-ietf-poly1305
-    password: Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTowUnNyY0ZKMXZPc1dFcWczUDU1aHZhYWNLZnVTaFQwY2MxaDB0OEFEME5BOHUxdVI%3D
-
-  - name: "VMESS-2"
-    type: vmess
-    server: panel3.ipyar.org
-    port: 32017
-    uuid: c0ccdeb9-784c-4d67-b904-20dcaac9902a
-    alterId: 0
-    cipher: auto
-    network: tcp
-    tls: false
-
-  - name: "VLESS-28"
-    type: vless
-    server: 162.19.250.117
-    port: 25921
-    uuid: 598d2298-5e1f-4d07-bc4b-6d1949693852
-    tls: false
-    udp: true
-    network: tcp
-    encryption: none
-    skip-cert-verify: true
-    client-fingerprint: chrome
-    servername: 162.19.250.117
-
-  - name: "VLESS-29"
-    type: vless
-    server: speedtest.net.zula.ir.nobitex.ir.shakhle.ir
-    port: 39001
-    uuid: 15449e06-b519-414a-9e0d-fbb4a0fd2780
-    tls: false
-    udp: true
-    network: xhttp
-    encryption: none
-    skip-cert-verify: true
-    client-fingerprint: firefox
-    servername: stackoverflow.com
-    http-opts:
-      path: ["/?ed=80@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn"]
-      headers:
-        Host: ["['speedtest.net.zula.ir.nobitex.ir.shakhle.ir']"]
-
-  - name: "TROJAN-2"
-    type: trojan
-    server: 172.67.181.173
-    port: 443
-    password: f282b878-8711-45a1-8c69-5564172123c1
-    sni: vpn.stupidworld.web.id
-    skip-cert-verify: true
-    udp: true
-    network: ws
-    ws-opts:
-      path: "['/Stupid-World/103.106.228.126-2053']"
-      headers:
-        Host: "['vpn.stupidworld.web.id']"
-
-  - name: "VLESS-30"
-    type: vless
-    server: 91.99.179.203
-    port: 443
-    uuid: 88b9da00-7a25-45ec-859b-14ad57a6bd2b
-    tls: false
-    udp: true
-    network: tcp
-    encryption: none
-    skip-cert-verify: true
-    client-fingerprint: chrome
-    servername: zula.ir
-
-  - name: "VLESS-31"
-    type: vless
-    server: api.node.snap.com.digi-gamingzone.koalavault.servers807.ir
-    port: 2025
-    uuid: 9705cfd1-d9b6-4d46-831e-ad06550d8e9a
-    tls: false
-    udp: true
-    network: grpc
-    encryption: none
-    skip-cert-verify: true
-    client-fingerprint: chrome
-    servername: journalofbigdata.springeropen.com
-    grpc-opts:
-      grpc-service-name: "sadf2341sad"
-
-  - name: "VLESS-32"
-    type: vless
-    server: modern-promise.seotoolsforyou.co.uk
-    port: 80
-    uuid: bd9b0366-e5dd-4665-bd5b-9896bc7327ae
-    tls: false
-    udp: true
-    network: ws
-    encryption: none
-    skip-cert-verify: true
-    client-fingerprint: chrome
-    servername: modern-promise.seotoolsforyou.co.uk
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "modern-promise.seotoolsforyou.co.uk"
-
-  - name: "VLESS-33"
-    type: vless
-    server: 103.160.204.50
-    port: 443
-    uuid: c98a16e4-0dc5-42f0-b3db-30f04525c123
-    tls: true
-    udp: true
-    network: ws
-    encryption: none
-    skip-cert-verify: true
-    client-fingerprint: chrome
-    servername: vless8-ekh.pages.dev
-    ws-opts:
-      path: "/Tel-@V2ray_Alpha"
-      headers:
-        Host: "vless8-ekh.pages.dev"
-
-  - name: "VLESS-34"
-    type: vless
-    server: 104.248.136.27
-    port: 28338
-    uuid: 0b9ee474-19f6-4d7f-9281-96f239e6cebc
-    tls: false
-    udp: true
-    network: grpc
-    encryption: none
-    skip-cert-verify: true
-    client-fingerprint: randomized
-    servername: cloudflare.com
-    grpc-opts:
-      grpc-service-name: "Telegram:@FergalVpnMod"
-
-  - name: "VLESS-35"
-    type: vless
-    server: 206.71.158.10
-    port: 443
-    uuid: 7c63f43f-f526-49bb-b5c8-2be26e11ef00
-    tls: true
-    udp: true
-    network: xhttp
-    encryption: none
-    skip-cert-verify: true
-    client-fingerprint: chrome
-    servername: statue.lnmarketplace.net
-    http-opts:
-      path: ["/statue/?v2rayng_fars----@v2rayng_fars"]
-      headers:
-        Host: ["['statue.lnmarketplace.net']"]
-
-  - name: "VLESS-36"
-    type: vless
-    server: 2a01:4f8:1c1a:dc2b::1
-    port: 8888
-    uuid: Parsashonam-289
-    tls: false
-    udp: true
-    network: tcp
-    encryption: none
-    skip-cert-verify: true
-    client-fingerprint: chrome
-    servername: 2a01:4f8:1c1a:dc2b::1
-
-  - name: "VMESS-3"
-    type: vmess
-    server: panel1.ipyar.org
-    port: 42684
-    uuid: c4bd9eba-8aea-4d5e-a2ee-b5de65ac14e1
-    alterId: 0
-    cipher: auto
-    network: tcp
-    tls: false
-
-  - name: "VLESS-37"
-    type: vless
-    server: 104.16.245.154
-    port: 8443
-    uuid: 47bd0b60-29ca-4755-a314-9f1ef398657e
-    tls: true
-    udp: true
-    network: ws
-    encryption: none
-    skip-cert-verify: true
-    client-fingerprint: random
-    servername: hong2333.pages.dev
-    ws-opts:
-      path: "/?ed=2560"
-      headers:
-        Host: "hong2333.pages.dev"
-
-  - name: "VLESS-38"
-    type: vless
-    server: 213.183.41.63
-    port: 443
-    uuid: 3c631fef-c28c-4dfe-aacc-9e67ace7d5b3
-    tls: false
-    udp: true
-    network: grpc
-    encryption: none
-    skip-cert-verify: true
-    client-fingerprint: chrome
-    servername: skyroom.online
-    grpc-opts:
-      grpc-service-name: "free"
-
-  - name: "VLESS-39"
-    type: vless
-    server: amir021.amir021.tech
-    port: 56817
-    uuid: 7b601ebe-d8ac-470a-b745-1bca7d89ee14
-    tls: true
-    udp: true
-    network: ws
-    encryption: none
-    skip-cert-verify: true
-    client-fingerprint: chrome
-    servername: amir021.amir021.tech
-    ws-opts:
-      path: "/@vpn_Zvpn-@vpn_Zvpn-@vpn_Zvpn-@vpn_Zvpn-@vpn_Zvpn-@vpn_Zvpn-@vpn_Zvpn-@vpn_Zvpn-@vpn_Zvpn-@vpn_Zvpn-@vpn_Zvpn-@vpn_Zvpn-@vpn_Zvpn-@vpn_Zvpn-@vpn_Zvpn-@vpn_Zvpn-@vpn_Zvpn-@vpn_Zvpn-@vpn_Zvpn-@vpn_Zvpn-?ed=2560"
-      headers:
-        Host: "amir021.amir021.tech"
-
-  - name: "VLESS-40"
-    type: vless
-    server: dl1-tr-cdn.easy-upload.org
-    port: 2010
-    uuid: c32819a3-bb1c-4e15-be00-ffcb657f8323
-    tls: false
-    udp: true
-    network: tcp
-    encryption: none
-    skip-cert-verify: true
-    client-fingerprint: chrome
-    servername: gharar.ir
-
-  - name: "SS-13"
-    type: ss
-    server: 83.147.216.70
-    port: 64519
-    cipher: chacha20-ietf-poly1305
-    password: YXgS8ComTam7qoesPlzlMo
-
-  - name: "VLESS-41"
-    type: vless
-    server: www.speedtest.net
-    port: 2095
-    uuid: e4e82781-f854-4f5e-bfeb-8f34d8ab9fe7
-    tls: false
-    udp: true
-    network: httpupgrade
-    encryption: none
-    skip-cert-verify: true
-    client-fingerprint: chrome
-    servername: cdncloud-direct-public.beraghsa.ir
-
-  - name: "VLESS-42"
-    type: vless
-    server: real-all3-2.sdcards.ir
-    port: 8501
-    uuid: ac37eb9c-0db8-4056-8f61-e8db4e2da35e
-    tls: false
-    udp: true
-    network: tcp
-    encryption: none
-    skip-cert-verify: true
-    client-fingerprint: firefox
-    servername: tgju.org
-
-  - name: "VLESS-43"
-    type: vless
-    server: moody-lock.seotoolsforyou.co.uk
-    port: 80
-    uuid: 82cdcdf0-e772-4d9a-b0a2-d6b605572ac1
-    tls: false
-    udp: true
-    network: ws
-    encryption: none
-    skip-cert-verify: true
-    client-fingerprint: chrome
-    servername: moody-lock.seotoolsforyou.co.uk
-    ws-opts:
-      path: "/?Join---TELEGRAM---MTMVPN---Join---MARAMBASHI---Join---TELEGRAM---MTMVPN---Join---TELEGRAM---MTMVPN?ed=2560"
-      headers:
-        Host: "moody-lock.seotoolsforyou.co.uk"
-
-  - name: "VLESS-44"
-    type: vless
-    server: 5.75.196.83
-    port: 18040
-    uuid: d60f6f5c-4580-43c8-bab7-98a1f1b97d92
-    tls: false
-    udp: true
-    network: xhttp
-    encryption: none
-    skip-cert-verify: true
-    client-fingerprint: chrome
-    servername: www.microsoft.com
-    http-opts:
-      path: ["/"]
-      headers:
-        Host: ["['5.75.196.83']"]
-
-  - name: "VLESS-45"
-    type: vless
-    server: test.fast.hosting-ip.com
-    port: 80
-    uuid: bb57d265-b716-4092-bd0a-68f3988db63c
-    tls: false
-    udp: true
-    network: xhttp
-    encryption: none
-    skip-cert-verify: true
-    client-fingerprint: chrome
-    servername: Laynetyour-name.global.ssl.fastly.net
-    http-opts:
-      path: ["/?ed=2048@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn"]
-      headers:
-        Host: ["['Laynetyour-name.global.ssl.fastly.net']"]
-
-  - name: "VLESS-46"
-    type: vless
-    server: holkanas.atroart.ir
-    port: 52928
-    uuid: dc58f214-4227-4f58-8090-cbcedf1adeba
-    tls: false
-    udp: true
-    network: tcp
-    encryption: none
-    skip-cert-verify: true
-    client-fingerprint: chrome
-    servername: holkanas.atroart.ir
-
-  - name: "VLESS-47"
-    type: vless
-    server: 45.82.251.124
-    port: 8880
-    uuid: e4824193-4f54-453b-d037-88368e85ef0e
-    tls: false
-    udp: true
-    network: grpc
-    encryption: none
-    skip-cert-verify: true
-    client-fingerprint: chrome
-    servername: 45.82.251.124
-    grpc-opts:
-      grpc-service-name: ""
-
-  - name: "VLESS-48"
-    type: vless
-    server: s3.vip.ip9s.ir
-    port: 37916
-    uuid: 31b1473d-31bf-48fb-9b35-b12d459125e6
-    tls: false
-    udp: true
-    network: tcp
-    encryption: none
-    skip-cert-verify: true
-    client-fingerprint: chrome
-    servername: cloudflare.com
-
+- name: 💎 @MPconnection (تلگرام)
+  type: vless
+  server: www.speedtest.net
+  port: 2087
+  uuid: 5b1a3493-6f9b-4530-aab7-af11e16c0a41
+  network: ws
+  tls: true
+  udp: true
+  client-fingerprint: chrome
+  servername: amin.amin-app.ir
+  ws-opts:
+    path: /Telegram,@Archive_Android/Telegram,@Archive_Android/Telegram,@Archive_Android/Telegram,@Archive_Android/Telegram,@Archive_Android/Telegram,@Archive_Android/Telegram,@Archive_Android/Telegram,@Archive_Android/Telegram,@Archive_Android/Telegram,@Archive_Android/Telegram,@Archive_Android/Telegram,@Archive_Android/Telegram,@Archive_Android/Telegram,@Archive_Android/Telegram,@Archive_Android
+    headers:
+      Host: amin.amin-app.ir
+- name: 💎 @MPconnection (تلگرام) (2)
+  type: vless
+  server: 172.66.40.99
+  port: 443
+  uuid: telegram-id-Arfilter
+  network: ws
+  tls: true
+  udp: true
+  client-fingerprint: chrome
+  servername: wIs.2SeDkFjEuIxIjD0Ew9DvKcxoisiEk61.BlOg
+  ws-opts:
+    path: /telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray?ed=2048
+    headers:
+      Host: wIs.2SeDkFjEuIxIjD0Ew9DvKcxoisiEk61.BlOg
+- name: 💎 @MPconnection (تلگرام) (3)
+  type: vless
+  server: Www.speedtest.net
+  port: 2095
+  uuid: e163d9d4-5a03-4dde-bc26-42c5cb0c04c7
+  network: httpupgrade#💎 @MPconnection (تلگرام)
+  tls: false
+  udp: true
+  client-fingerprint: chrome
+  servername: change.iransheep.web.tr.
+- name: 💎 @MPconnection (تلگرام) (4)
+  type: vless
+  server: 104.18.11.248
+  port: 80
+  uuid: e9e58a1c-bf42-498d-9b35-97cecba906f3
+  network: xhttp#💎 @MPconnection (تلگرام)
+  tls: false
+  udp: true
+  client-fingerprint: chrome
+  servername: 2.3.4.sharkpv.ir
+- name: 💎 @MPconnection (تلگرام) (5)
+  type: vless
+  server: deDiCaTED-deVelOPMENt.seoTOOLSforYoU.CO.UK
+  port: 80
+  uuid: 2054405e-70ff-40a2-ae27-16b63d72390a
+  network: ws#💎 @MPconnection (تلگرام)
+  tls: false
+  udp: true
+  client-fingerprint: chrome
+- name: 💎 @MPconnection (تلگرام) (6)
+  type: vless
+  server: deu246.bypassall.org
+  port: 443
+  uuid: b4b8aa1f-77d2-4851-a5a4-f78886f3e997
+  network: tcp
+  tls: true
+  udp: true
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+- name: 💎 @MPconnection (تلگرام) (7)
+  type: vless
+  server: dedicated-development.seotoolsforyou.co.uk
+  port: 80
+  uuid: 2054405e-70ff-40a2-ae27-16b63d72390a
+  network: ws#💎 @MPconnection (تلگرام)
+  tls: false
+  udp: true
+  client-fingerprint: chrome
+- name: 💎 @MPconnection (تلگرام) (8)
+  type: vless
+  server: de.astracat.ru
+  port: 1234
+  uuid: 99766fad-77bb-4b1c-a4f3-8f8028542033
+  network: tcp
+  tls: true
+  udp: true
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+- name: 💎 @MPconnection (تلگرام) (9)
+  type: vless
+  server: cb14.connectbaash.info
+  port: 4414
+  uuid: 54559d31-a4f0-4648-beeb-8323045a36c8
+  network: tcp#💎 @MPconnection (تلگرام)
+  tls: false
+  udp: true
+  client-fingerprint: chrome
+  servername: varzesh3.com
+- name: 💎 @MPconnection (تلگرام) (10)
+  type: vless
+  server: sss49730.tas-bazi.com
+  port: 443
+  uuid: 7606bb75-416a-4f99-ba20-019cb25543cf
+  network: xhttp#💎 @MPconnection (تلگرام)
+  tls: false
+  udp: true
+  client-fingerprint: chrome
+- name: 💎 @MPconnection (تلگرام) (11)
+  type: vless
+  server: 185.236.232.116
+  port: 8880
+  uuid: e4824193-4f54-453b-d037-88368e85ef0e
+  network: grpc#💎 @MPconnection (تلگرام)
+  tls: false
+  udp: true
+  client-fingerprint: chrome
+- name: 💎 @MPconnection (تلگرام) (12)
+  type: vless
+  server: 151.101.242.172
+  port: 80
+  uuid: mitivpn--
+  network: xhttp#💎 @MPconnection (تلگرام)
+  tls: false
+  udp: true
+  client-fingerprint: chrome
+  servername: shrfrrd.global.ssl.fastly.net
+- name: 💎 @MPconnection (تلگرام) (13)
+  type: vless
+  server: m35a.vip784.com
+  port: 33801
+  uuid: c5d02fbd-13d9-4545-a70a-a987e5af020e
+  network: tcp#💎 @MPconnection (تلگرام)
+  tls: false
+  udp: true
+  client-fingerprint: chrome
+  servername: varzesh3.ir
+- name: 💎 @MPconnection (تلگرام) (14)
+  type: vless
+  server: 104.21.27.146
+  port: 443
+  uuid: mitivpn--
+  network: ws
+  tls: true
+  udp: true
+  client-fingerprint: chrome
+  ws-opts:
+    path: /---@MiTiVPN---@MiTiVPN---@MiTiVPN---@MiTiVPN---@MiTiVPN
+    headers:
+      Host: ''
+- name: 💎 @MPconnection (تلگرام) (15)
+  type: vless
+  server: 151.101.3.8
+  port: 80
+  uuid: mitivpn--
+  network: xhttp#💎 @MPconnection (تلگرام)
+  tls: false
+  udp: true
+  client-fingerprint: chrome
+  servername: shrfrrd.global.ssl.fastly.net
+- name: 💎 @MPconnection (تلگرام) (16)
+  type: vless
+  server: m36a.vip784.com
+  port: 33801
+  uuid: 75916ff8-2f80-43dc-ba9a-34464e1bd340
+  network: tcp#💎 @MPconnection (تلگرام)
+  tls: false
+  udp: true
+  client-fingerprint: chrome
+  servername: varzesh3.ir
+- name: 💎 @MPconnection (تلگرام) (17)
+  type: vless
+  server: www.speedtest.net
+  port: 8443
+  uuid: ccbe6b7c-9264-40c4-8bc1-ef8f6205d7a4
+  network: ws
+  tls: true
+  udp: true
+  client-fingerprint: chrome
+  servername: lease-19.access.name.ng
+  ws-opts:
+    path: /
+    headers:
+      Host: lease-19.access.name.ng
+- name: 💎 @MPconnection (تلگرام) (18)
+  type: vless
+  server: 104.21.36.57
+  port: 443
+  uuid: 0cc731b9-0375-4590-aeaa-7e2611a149fe
+  network: ws
+  tls: true
+  udp: true
+  client-fingerprint: chrome
+  servername: black.fullmargintraders.com
+  ws-opts:
+    path: /wsv/0cc731b9-0375-4590-aeaa-7e2611a149fe
+    headers:
+      Host: black.fullmargintraders.com
+- name: 💎 @MPconnection (تلگرام) (19)
+  type: vless
+  server: 102.177.189.251
+  port: 443
+  uuid: 401374e6-df77-41fb-f638-dad8184f175b
+  network: grpc
+  tls: true
+  udp: true
+  client-fingerprint: chrome
+- name: 💎 @MPconnection (تلگرام) (20)
+  type: vless
+  server: speedtest.net
+  port: 80
+  uuid: ca9fc94c-8ffc-4fb0-8cfa-a21bab6fcddf
+  network: xhttp#💎 @MPconnection (تلگرام)
+  tls: false
+  udp: true
+  client-fingerprint: chrome
+  servername: taracpuyour-name.global.ssl.fastly.net
+- name: 💎 @MPconnection (تلگرام) (21)
+  type: vless
+  server: ipw.gfdv54cvghhgfhgj-njhgj64.info
+  port: 443
+  uuid: 5e065f5d-69b9-45a5-bb27-d0b6dbcfa054
+  network: ws
+  tls: true
+  udp: true
+  client-fingerprint: chrome
+  servername: 638924474356237296.amsterdam-blkaft-aaaa.info
+  ws-opts:
+    path: /eyswrlws
+    headers:
+      Host: 638924474356237296.amsterdam-blkaft-aaaa.info
+- name: 💎 @MPconnection (تلگرام) (22)
+  type: vless
+  server: 91.99.16.244
+  port: 443
+  uuid: Parsashonam-305
+  network: xhttp
+  tls: true
+  udp: true
+  client-fingerprint: chrome
+  ws-opts:
+    path: /Parsashonam-Parsashonam-Parsashonam-Parsashonam-Parsashonam-Parsashonam-Parsashonam-Parsashonam-Parsashonam-Parsashonam-Parsashonam-Parsashonam-Parsashonam-Parsashonam-Parsashonam-Parsashonam-Parsashonam-Parsashonam
+    headers:
+      Host: ''
+- name: 💎 @MPconnection (تلگرام) (23)
+  type: vless
+  server: 151.101.3.8
+  port: 80
+  uuid: 96b2ced2-bc96-4dcf-f792-2a21f5b58ac6
+  network: xhttp#💎 @MPconnection (تلگرام)
+  tls: false
+  udp: true
+  client-fingerprint: chrome
+  servername: Mahsazxshop.org
+- name: 💎 @MPconnection (تلگرام) (24)
+  type: vless
+  server: 167.99.45.44
+  port: 30402
+  uuid: cicadanet
+  network: tcp
+  tls: true
+  udp: true
+  client-fingerprint: chrome
+- name: 💎 @MPconnection (تلگرام) (25)
+  type: vless
+  server: magical-fish.seotoolsforyou.co.uk
+  port: 80
+  uuid: edb4c373-ac92-4430-8f42-94439ca829b9
+  network: ws#💎 @MPconnection (تلگرام)
+  tls: false
+  udp: true
+  client-fingerprint: chrome
+- name: 💎 @MPconnection (تلگرام) (26)
+  type: vless
+  server: fierce-data.seotoolsforyou.co.uk
+  port: 80
+  uuid: c313c27c-97ff-45ed-ab5c-64641af5debc
+  network: ws#💎 @MPconnection (تلگرام)
+  tls: false
+  udp: true
+  client-fingerprint: chrome
+- name: 💎 @MPconnection (تلگرام) (27)
+  type: vless
+  server: beLoveD-faILure.SeOtOOLsForyOu.Co.uk
+  port: 80
+  uuid: 3cad733b-3526-476b-adf5-b7cbdd33dc6c
+  network: ws#💎 @MPconnection (تلگرام)
+  tls: false
+  udp: true
+  client-fingerprint: chrome
+- name: 💎 @MPconnection (تلگرام) (28)
+  type: vless
+  server: 193.151.135.21
+  port: 44443
+  uuid: 53fff6cc-b4ec-43e8-ade5-e0c42972fc33
+  network: tcp
+  tls: true
+  udp: true
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+- name: 💎 @MPconnection (تلگرام) (29)
+  type: vless
+  server: test.fast.hosting-ip.com
+  port: 80
+  uuid: telegram-id-ArV2ray
+  network: xhttp#💎 @MPconnection (تلگرام)
+  tls: false
+  udp: true
+  client-fingerprint: chrome
+  servername: Mtkirand.com
+- name: 💎 @MPconnection (تلگرام) (30)
+  type: vless
+  server: GrOUNdED-brotHER.SeoToolSFOryOu.co.uK
+  port: 80
+  uuid: 52adc6ba-b1c7-4541-a594-08fc698be640
+  network: ws#💎 @MPconnection (تلگرام)
+  tls: false
+  udp: true
+  client-fingerprint: chrome
+- name: 💎 @MPconnection (تلگرام) (31)
+  type: vless
+  server: grounded-brother.seotoolsforyou.co.uk
+  port: 80
+  uuid: 52adc6ba-b1c7-4541-a594-08fc698be640
+  network: ws#💎 @MPconnection (تلگرام)
+  tls: false
+  udp: true
+  client-fingerprint: chrome
+- name: 💎 @MPconnection (تلگرام) (32)
+  type: vless
+  server: 198.62.62.2
+  port: 443
+  uuid: 598b4251-fd03-48fe-b12d-630ac3adf2e5
+  network: ws
+  tls: true
+  udp: true
+  client-fingerprint: chrome
+  servername: smn2.gerlemondns.info
+  ws-opts:
+    path: /hjgfdws
+    headers:
+      Host: smn2.gerlemondns.info
 proxy-groups:
-  - name: "🚀 Auto"
-    type: url-test
-    proxies:
-      - SS-1
-      - TROJAN-1
-      - SS-2
-      - VLESS-1
-      - VLESS-2
-      - VLESS-3
-      - SS-3
-      - VLESS-4
-      - SS-4
-      - SS-5
-      - VMESS-1
-      - SS-6
-      - VLESS-5
-      - VLESS-6
-      - VLESS-7
-      - VLESS-8
-      - VLESS-9
-      - VLESS-10
-      - VLESS-11
-      - VLESS-12
-      - VLESS-13
-      - SS-7
-      - VLESS-14
-      - SS-8
-      - SS-9
-      - VLESS-15
-      - VLESS-16
-      - VLESS-17
-      - SS-10
-      - VLESS-18
-      - VLESS-19
-      - VLESS-20
-      - VLESS-21
-      - VLESS-22
-      - VLESS-23
-      - VLESS-24
-      - SS-11
-      - VLESS-25
-      - VLESS-26
-      - VLESS-27
-      - SS-12
-      - VMESS-2
-      - VLESS-28
-      - VLESS-29
-      - TROJAN-2
-      - VLESS-30
-      - VLESS-31
-      - VLESS-32
-      - VLESS-33
-      - VLESS-34
-      - VLESS-35
-      - VLESS-36
-      - VMESS-3
-      - VLESS-37
-      - VLESS-38
-      - VLESS-39
-      - VLESS-40
-      - SS-13
-      - VLESS-41
-      - VLESS-42
-      - VLESS-43
-      - VLESS-44
-      - VLESS-45
-      - VLESS-46
-      - VLESS-47
-      - VLESS-48
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-
-  - name: "🔰 Manual"
-    type: select
-    proxies:
-      - SS-1
-      - TROJAN-1
-      - SS-2
-      - VLESS-1
-      - VLESS-2
-      - VLESS-3
-      - SS-3
-      - VLESS-4
-      - SS-4
-      - SS-5
-      - VMESS-1
-      - SS-6
-      - VLESS-5
-      - VLESS-6
-      - VLESS-7
-      - VLESS-8
-      - VLESS-9
-      - VLESS-10
-      - VLESS-11
-      - VLESS-12
-      - VLESS-13
-      - SS-7
-      - VLESS-14
-      - SS-8
-      - SS-9
-      - VLESS-15
-      - VLESS-16
-      - VLESS-17
-      - SS-10
-      - VLESS-18
-      - VLESS-19
-      - VLESS-20
-      - VLESS-21
-      - VLESS-22
-      - VLESS-23
-      - VLESS-24
-      - SS-11
-      - VLESS-25
-      - VLESS-26
-      - VLESS-27
-      - SS-12
-      - VMESS-2
-      - VLESS-28
-      - VLESS-29
-      - TROJAN-2
-      - VLESS-30
-      - VLESS-31
-      - VLESS-32
-      - VLESS-33
-      - VLESS-34
-      - VLESS-35
-      - VLESS-36
-      - VMESS-3
-      - VLESS-37
-      - VLESS-38
-      - VLESS-39
-      - VLESS-40
-      - SS-13
-      - VLESS-41
-      - VLESS-42
-      - VLESS-43
-      - VLESS-44
-      - VLESS-45
-      - VLESS-46
-      - VLESS-47
-      - VLESS-48
-
+- name: AUTO
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 100
+  proxies:
+  - 💎 @MPconnection (تلگرام)
+  - 💎 @MPconnection (تلگرام) (2)
+  - 💎 @MPconnection (تلگرام) (3)
+  - 💎 @MPconnection (تلگرام) (4)
+  - 💎 @MPconnection (تلگرام) (5)
+  - 💎 @MPconnection (تلگرام) (6)
+  - 💎 @MPconnection (تلگرام) (7)
+  - 💎 @MPconnection (تلگرام) (8)
+  - 💎 @MPconnection (تلگرام) (9)
+  - 💎 @MPconnection (تلگرام) (10)
+  - 💎 @MPconnection (تلگرام) (11)
+  - 💎 @MPconnection (تلگرام) (12)
+  - 💎 @MPconnection (تلگرام) (13)
+  - 💎 @MPconnection (تلگرام) (14)
+  - 💎 @MPconnection (تلگرام) (15)
+  - 💎 @MPconnection (تلگرام) (16)
+  - 💎 @MPconnection (تلگرام) (17)
+  - 💎 @MPconnection (تلگرام) (18)
+  - 💎 @MPconnection (تلگرام) (19)
+  - 💎 @MPconnection (تلگرام) (20)
+  - 💎 @MPconnection (تلگرام) (21)
+  - 💎 @MPconnection (تلگرام) (22)
+  - 💎 @MPconnection (تلگرام) (23)
+  - 💎 @MPconnection (تلگرام) (24)
+  - 💎 @MPconnection (تلگرام) (25)
+  - 💎 @MPconnection (تلگرام) (26)
+  - 💎 @MPconnection (تلگرام) (27)
+  - 💎 @MPconnection (تلگرام) (28)
+  - 💎 @MPconnection (تلگرام) (29)
+  - 💎 @MPconnection (تلگرام) (30)
+  - 💎 @MPconnection (تلگرام) (31)
+  - 💎 @MPconnection (تلگرام) (32)
+- name: SELECT
+  type: select
+  proxies:
+  - AUTO
+  - 💎 @MPconnection (تلگرام)
+  - 💎 @MPconnection (تلگرام) (2)
+  - 💎 @MPconnection (تلگرام) (3)
+  - 💎 @MPconnection (تلگرام) (4)
+  - 💎 @MPconnection (تلگرام) (5)
+  - 💎 @MPconnection (تلگرام) (6)
+  - 💎 @MPconnection (تلگرام) (7)
+  - 💎 @MPconnection (تلگرام) (8)
+  - 💎 @MPconnection (تلگرام) (9)
+  - 💎 @MPconnection (تلگرام) (10)
 rules:
-  - DOMAIN-SUFFIX,ir,DIRECT
-  - GEOIP,CN,DIRECT
-  - MATCH,🚀 Auto
+- MATCH,SELECT
