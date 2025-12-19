@@ -6,42 +6,492 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: MPconnection-1
+- name: ⚡️MP-VIP2
   type: vless
-  server: 23.164.240.209
-  port: 8443
-  uuid: 2d19551f-b872-426b-a316-5bac8026148b
-  network: tcp#MPconnection-1
+  server: 147.45.230.128
+  port: 4443
+  uuid: edb3d24d-1a55-42f7-8752-6ae216f18cf4
+  network: tcp
+  tls: true
+  udp: true
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+- name: ⚡️MP-VIP2 (2)
+  type: vless
+  server: 143.244.197.90
+  port: 40187
+  uuid: f22d79bb-4eaf-45ee-b406-81ad3745dff1
+  network: grpc
   tls: false
   udp: true
   client-fingerprint: chrome
-- name: MPconnection-2
+- name: ⚡️MP-VIP2 (3)
   type: vless
-  server: 45.131.185.149
-  port: 8443
-  uuid: d4d32ba1-1025-4b3f-a3b1-2ff28ef225f8
-  network: tcp#MPconnection-2
+  server: brenna.ns.cloudflare.com
+  port: 443
+  uuid: 1b2c91ab-f6c9-42f8-b2c6-8de0ac133d63
+  network: ws
+  tls: true
+  udp: true
+  client-fingerprint: chrome
+  ws-opts:
+    path: /sghiyws
+    headers:
+      Host: ''
+- name: ⚡️MP-VIP2 (4)
+  type: vless
+  server: uaeemar123.vtuix.ir
+  port: 7033
+  uuid: 2652fbc5-e1b1-691f-c9c7-11ad83e828a6
+  network: grpc
+  tls: true
+  udp: true
+  client-fingerprint: chrome
+- name: ⚡️MP-VIP2 (5)
+  type: vless
+  server: brenna.ns.cloudflare.com
+  port: 443
+  uuid: 1b2c91ab-f6c9-42f8-b2c6-8de0ac133d63
+  network: ws
+  tls: true
+  udp: true
+  client-fingerprint: chrome
+  servername: terazhedi.info
+  ws-opts:
+    path: /sghiyws
+    headers:
+      Host: terazhedi.info
+- name: ⚡️MP-VIP2 (6)
+  type: vless
+  server: 172.64.34.176
+  port: 443
+  uuid: 1b2c91ab-f6c9-42f8-b2c6-8de0ac133d63
+  network: ws
+  tls: true
+  udp: true
+  client-fingerprint: chrome
+  servername: terazhedi.info
+  ws-opts:
+    path: /sghiyws
+    headers:
+      Host: terazhedi.info
+- name: ⚡️MP-VIP2 (7)
+  type: vless
+  server: zula.ir
+  port: 443
+  uuid: 1b2c91ab-f6c9-42f8-b2c6-8de0ac133d63
+  network: ws
+  tls: true
+  udp: true
+  client-fingerprint: chrome
+  servername: terazhedi.info
+  ws-opts:
+    path: /sghiyws
+    headers:
+      Host: terazhedi.info
+- name: ⚡️MP-VIP2 (8)
+  type: vless
+  server: betty.ns.cloudflare.com
+  port: 443
+  uuid: 94daa8ad-75ed-4dbf-a6de-d05036d98df5
+  network: ws
+  tls: true
+  udp: true
+  client-fingerprint: chrome
+  servername: vangoghh.info
+  ws-opts:
+    path: /tixvuws
+    headers:
+      Host: vangoghh.info
+- name: ⚡️MP-VIP2 (9)
+  type: vless
+  server: 172.64.34.176
+  port: 443
+  uuid: 1b2c91ab-f6c9-42f8-b2c6-8de0ac133d63
+  network: ws
+  tls: true
+  udp: true
+  client-fingerprint: chrome
+  ws-opts:
+    path: /sghiyws
+    headers:
+      Host: ''
+- name: ⚡️MP-VIP2 (10)
+  type: vless
+  server: 194.150.166.134
+  port: 17166
+  uuid: 197092b3-e995-48b7-a34b-d32eb75b62e1
+  network: tcp#⚡️MP-VIP2
   tls: false
   udp: true
   client-fingerprint: chrome
-- name: MPconnection-3
+- name: ⚡️MP-VIP2 (11)
   type: vless
-  server: 185.238.189.132
-  port: 8443
-  uuid: ec50b168-8971-41dc-b8d4-a056a9ffa462
-  network: tcp#MPconnection-3
+  server: fn11.irsbv2.ir
+  port: 443
+  uuid: 47867494-9509-4c32-a90a-e9253b033279
+  network: ws#⚡️MP-VIP2
   tls: false
   udp: true
   client-fingerprint: chrome
-- name: MPconnection-4
+  servername: cloudflare.com
+- name: ⚡️MP-VIP2 (12)
   type: vless
-  server: 185.238.189.133
-  port: 8443
-  uuid: 304bf623-fcb3-4d10-9147-b62f5520ea25
-  network: tcp#MPconnection-4
+  server: brenna.ns.cloudflare.com
+  port: 443
+  uuid: 1b2c91ab-f6c9-42f8-b2c6-8de0ac133d63
+  network: ws
+  tls: true
+  udp: true
+  client-fingerprint: chrome
+  servername: terazhedi.info
+  ws-opts:
+    path: /sghiyws
+    headers:
+      Host: terazhedi.info
+- name: ⚡️MP-VIP2 (13)
+  type: vless
+  server: brenna.ns.cloudflare.com
+  port: 443
+  uuid: 1b2c91ab-f6c9-42f8-b2c6-8de0ac133d63
+  network: ws
+  tls: true
+  udp: true
+  client-fingerprint: chrome
+  ws-opts:
+    path: /sghiyws
+    headers:
+      Host: ''
+- name: ⚡️MP-VIP2 (14)
+  type: vless
+  server: 108.162.194.176
+  port: 443
+  uuid: 1b2c91ab-f6c9-42f8-b2c6-8de0ac133d63
+  network: ws
+  tls: true
+  udp: true
+  client-fingerprint: chrome
+  servername: terazhedi.info
+  ws-opts:
+    path: /sghiyws
+    headers:
+      Host: terazhedi.info
+- name: ⚡️MP-VIP2 (15)
+  type: vless
+  server: 179.61.251.78
+  port: 443
+  uuid: fabc8a38-76c5-48fe-ada7-a9e52dd16225
+  network: tcp
+  tls: true
+  udp: true
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+- name: ⚡️MP-VIP2 (16)
+  type: vless
+  server: clyde.ns.cloudflare.com
+  port: 443
+  uuid: 02e46039-200d-4ae4-ac90-b0d619f72034
+  network: ws
+  tls: true
+  udp: true
+  client-fingerprint: chrome
+  servername: redlabell.info
+  ws-opts:
+    path: /aafeuws
+    headers:
+      Host: redlabell.info
+- name: ⚡️MP-VIP2 (17)
+  type: vless
+  server: 209.38.168.122
+  port: 21250
+  uuid: 69239696-f17e-4eb2-a337-7ce07d65d23d
+  network: grpc
   tls: false
   udp: true
   client-fingerprint: chrome
+- name: ⚡️MP-VIP2 (18)
+  type: vless
+  server: 151.101.25.242
+  port: 80
+  uuid: 240026c6-3e97-4050-926d-8c2d06bd75c9
+  network: xhttp#⚡️MP-VIP2
+  tls: false
+  udp: true
+  client-fingerprint: chrome
+  servername: jetfr228.global.ssl.fastly.net
+- name: ⚡️MP-VIP2 (19)
+  type: vless
+  server: 194.182.79.105
+  port: 23919
+  uuid: 6440c04a-a2b5-41b7-9f23-545456f6cba2
+  network: grpc
+  tls: false
+  udp: true
+  client-fingerprint: chrome
+- name: ⚡️MP-VIP2 (20)
+  type: vless
+  server: am288.amin-1.ir
+  port: 2082
+  uuid: 1ad8e2eb-d5a7-4397-a9f6-c5d7f09a849d
+  network: xhttp#⚡️MP-VIP2
+  tls: false
+  udp: true
+  client-fingerprint: chrome
+  servername: am288.amin-1.ir
+- name: ⚡️MP-VIP2 (21)
+  type: vless
+  server: 151.101.25.242
+  port: 80
+  uuid: e25bd23b-22f0-4026-8883-59486d1761c5
+  network: xhttp#⚡️MP-VIP2
+  tls: false
+  udp: true
+  client-fingerprint: chrome
+  servername: jetuk43.global.ssl.fastly.net
+- name: MP-VLESS-1
+  type: vless
+  server: 91.149.253.167
+  port: 15970
+  uuid: 2c2ce61d-92de-4274-9b62-d8c66ac4ba65
+  network: tcp#MP-VLESS-1
+  tls: false
+  udp: true
+  client-fingerprint: chrome
+- name: MP-VLESS-2
+  type: vless
+  server: 91.149.253.151
+  port: 15970
+  uuid: 451e4cd0-a3a6-43d8-b4cf-1e7f9b41aed9
+  network: tcp#MP-VLESS-2
+  tls: false
+  udp: true
+  client-fingerprint: chrome
+- name: MP-VMESS-6
+  type: vless
+  server: 91.149.253.167
+  port: 8443
+  uuid: 36df8d37-abc1-4e68-a639-0d6cc710cb63
+  network: tcp#MP-VMESS-6
+  tls: false
+  udp: true
+  client-fingerprint: chrome
+- name: MP-VMESS-7
+  type: vless
+  server: 91.149.253.151
+  port: 8443
+  uuid: 871734c7-61d2-440d-81fa-b43826a1d97e
+  network: tcp#MP-VMESS-7
+  tls: false
+  udp: true
+  client-fingerprint: chrome
+- name: MP
+  type: vless
+  server: 167.99.201.104
+  port: 443
+  uuid: 976ca50a-008a-4cca-b581-cf48b53d8833
+  network: xhttp
+  tls: true
+  udp: true
+  client-fingerprint: chrome
+  ws-opts:
+    path: /farasati1
+    headers:
+      Host: ''
+- name: MP (2)
+  type: vless
+  server: 65.109.179.24
+  port: 443
+  uuid: 2250c971-16ea-4a1e-bbad-3f0460ea8e84
+  network: xhttp
+  tls: true
+  udp: true
+  client-fingerprint: chrome
+  ws-opts:
+    path: /farasati1
+    headers:
+      Host: ''
+- name: MP (3)
+  type: vless
+  server: 46.101.93.252
+  port: 443
+  uuid: 29f51ede-e474-4a4a-8ceb-b963d22535a8
+  network: xhttp
+  tls: true
+  udp: true
+  client-fingerprint: chrome
+  ws-opts:
+    path: /farasati1
+    headers:
+      Host: ''
+- name: MP (4)
+  type: vless
+  server: 65.109.208.201
+  port: 443
+  uuid: b46fc521-a96f-40e6-b93f-83895d4dfb70
+  network: xhttp
+  tls: true
+  udp: true
+  client-fingerprint: chrome
+  ws-opts:
+    path: /farasati1
+    headers:
+      Host: ''
+- name: MP (5)
+  type: vless
+  server: 167.71.135.45
+  port: 443
+  uuid: a594e4e9-b6ea-4ce7-8ff3-4f925fdbae4b
+  network: xhttp
+  tls: true
+  udp: true
+  client-fingerprint: chrome
+  ws-opts:
+    path: /farasati1
+    headers:
+      Host: ''
+- name: MP (6)
+  type: vless
+  server: 65.109.205.236
+  port: 443
+  uuid: 7630b9a6-da6c-472e-aab0-6d4572f89862
+  network: xhttp
+  tls: true
+  udp: true
+  client-fingerprint: chrome
+  ws-opts:
+    path: /farasati1
+    headers:
+      Host: ''
+- name: MP (7)
+  type: vless
+  server: 91.107.131.141
+  port: 443
+  uuid: a72e56ef-b52e-4506-860d-b6f7e481fdae
+  network: xhttp
+  tls: true
+  udp: true
+  client-fingerprint: chrome
+  ws-opts:
+    path: /farasati1
+    headers:
+      Host: ''
+- name: MP (8)
+  type: vless
+  server: 188.166.174.44
+  port: 443
+  uuid: 798f8675-1b00-4b0b-81e3-4b2fc03ed900
+  network: xhttp
+  tls: true
+  udp: true
+  client-fingerprint: chrome
+  ws-opts:
+    path: /farasati1
+    headers:
+      Host: ''
+- name: MP (9)
+  type: vless
+  server: 91.107.180.62
+  port: 443
+  uuid: 72d64ac4-2c27-477f-a7d4-c662cba303ba
+  network: xhttp
+  tls: true
+  udp: true
+  client-fingerprint: chrome
+  ws-opts:
+    path: /farasati1
+    headers:
+      Host: ''
+- name: MP (10)
+  type: vless
+  server: 139.59.172.10
+  port: 443
+  uuid: 84653bd9-8414-4bb3-8787-f143ba34c23d
+  network: xhttp
+  tls: true
+  udp: true
+  client-fingerprint: chrome
+  ws-opts:
+    path: /farasati1
+    headers:
+      Host: ''
+- name: MP (11)
+  type: vless
+  server: 91.107.179.107
+  port: 443
+  uuid: 1665faa1-3e2f-4b09-8d8b-9954d80781bc
+  network: xhttp
+  tls: true
+  udp: true
+  client-fingerprint: chrome
+  ws-opts:
+    path: /farasati1
+    headers:
+      Host: ''
+- name: MP (12)
+  type: vless
+  server: 134.209.191.114
+  port: 443
+  uuid: fcc0c1c3-f3da-4d1a-b52c-30ceedda6192
+  network: xhttp
+  tls: true
+  udp: true
+  client-fingerprint: chrome
+  ws-opts:
+    path: /farasati1
+    headers:
+      Host: ''
+- name: MP (13)
+  type: vless
+  server: 5.75.203.109
+  port: 443
+  uuid: bc548a10-4e64-4358-bf6f-da945653ae0e
+  network: xhttp
+  tls: true
+  udp: true
+  client-fingerprint: chrome
+  ws-opts:
+    path: /farasati1
+    headers:
+      Host: ''
+- name: MP (14)
+  type: vless
+  server: 5.75.206.206
+  port: 443
+  uuid: d58aaedb-5f94-4c25-b3f4-40b6846f8caa
+  network: xhttp
+  tls: true
+  udp: true
+  client-fingerprint: chrome
+  ws-opts:
+    path: /farasati1
+    headers:
+      Host: ''
+- name: MP (15)
+  type: vless
+  server: 5.75.201.97
+  port: 443
+  uuid: 7aef7784-53f7-4416-aff7-e2538c271010
+  network: xhttp
+  tls: true
+  udp: true
+  client-fingerprint: chrome
+  ws-opts:
+    path: /farasati1
+    headers:
+      Host: ''
+- name: MP (16)
+  type: vless
+  server: 91.107.139.205
+  port: 443
+  uuid: 6c240c9d-df74-42e9-a66b-5aaa4921f1e9
+  network: xhttp
+  tls: true
+  udp: true
+  client-fingerprint: chrome
+  ws-opts:
+    path: /farasati1
+    headers:
+      Host: ''
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -49,17 +499,60 @@ proxy-groups:
   interval: 300
   tolerance: 100
   proxies:
-  - MPconnection-1
-  - MPconnection-2
-  - MPconnection-3
-  - MPconnection-4
+  - ⚡️MP-VIP2
+  - ⚡️MP-VIP2 (2)
+  - ⚡️MP-VIP2 (3)
+  - ⚡️MP-VIP2 (4)
+  - ⚡️MP-VIP2 (5)
+  - ⚡️MP-VIP2 (6)
+  - ⚡️MP-VIP2 (7)
+  - ⚡️MP-VIP2 (8)
+  - ⚡️MP-VIP2 (9)
+  - ⚡️MP-VIP2 (10)
+  - ⚡️MP-VIP2 (11)
+  - ⚡️MP-VIP2 (12)
+  - ⚡️MP-VIP2 (13)
+  - ⚡️MP-VIP2 (14)
+  - ⚡️MP-VIP2 (15)
+  - ⚡️MP-VIP2 (16)
+  - ⚡️MP-VIP2 (17)
+  - ⚡️MP-VIP2 (18)
+  - ⚡️MP-VIP2 (19)
+  - ⚡️MP-VIP2 (20)
+  - ⚡️MP-VIP2 (21)
+  - MP-VLESS-1
+  - MP-VLESS-2
+  - MP-VMESS-6
+  - MP-VMESS-7
+  - MP
+  - MP (2)
+  - MP (3)
+  - MP (4)
+  - MP (5)
+  - MP (6)
+  - MP (7)
+  - MP (8)
+  - MP (9)
+  - MP (10)
+  - MP (11)
+  - MP (12)
+  - MP (13)
+  - MP (14)
+  - MP (15)
+  - MP (16)
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - MPconnection-1
-  - MPconnection-2
-  - MPconnection-3
-  - MPconnection-4
+  - ⚡️MP-VIP2
+  - ⚡️MP-VIP2 (2)
+  - ⚡️MP-VIP2 (3)
+  - ⚡️MP-VIP2 (4)
+  - ⚡️MP-VIP2 (5)
+  - ⚡️MP-VIP2 (6)
+  - ⚡️MP-VIP2 (7)
+  - ⚡️MP-VIP2 (8)
+  - ⚡️MP-VIP2 (9)
+  - ⚡️MP-VIP2 (10)
 rules:
 - MATCH,SELECT
