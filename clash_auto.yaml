@@ -6,492 +6,318 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: ⚡️MP-VIP2
-  type: vless
-  server: 147.45.230.128
-  port: 4443
-  uuid: edb3d24d-1a55-42f7-8752-6ae216f18cf4
-  network: tcp
-  tls: true
-  udp: true
-  client-fingerprint: chrome
-  flow: xtls-rprx-vision
-- name: ⚡️MP-VIP2 (2)
-  type: vless
-  server: 143.244.197.90
-  port: 40187
-  uuid: f22d79bb-4eaf-45ee-b406-81ad3745dff1
-  network: grpc
-  tls: false
-  udp: true
-  client-fingerprint: chrome
-- name: ⚡️MP-VIP2 (3)
-  type: vless
-  server: brenna.ns.cloudflare.com
-  port: 443
-  uuid: 1b2c91ab-f6c9-42f8-b2c6-8de0ac133d63
-  network: ws
-  tls: true
-  udp: true
-  client-fingerprint: chrome
-  ws-opts:
-    path: /sghiyws
-    headers:
-      Host: ''
-- name: ⚡️MP-VIP2 (4)
-  type: vless
-  server: uaeemar123.vtuix.ir
-  port: 7033
-  uuid: 2652fbc5-e1b1-691f-c9c7-11ad83e828a6
-  network: grpc
-  tls: true
-  udp: true
-  client-fingerprint: chrome
-- name: ⚡️MP-VIP2 (5)
-  type: vless
-  server: brenna.ns.cloudflare.com
-  port: 443
-  uuid: 1b2c91ab-f6c9-42f8-b2c6-8de0ac133d63
-  network: ws
-  tls: true
-  udp: true
-  client-fingerprint: chrome
-  servername: terazhedi.info
-  ws-opts:
-    path: /sghiyws
-    headers:
-      Host: terazhedi.info
-- name: ⚡️MP-VIP2 (6)
-  type: vless
-  server: 172.64.34.176
-  port: 443
-  uuid: 1b2c91ab-f6c9-42f8-b2c6-8de0ac133d63
-  network: ws
-  tls: true
-  udp: true
-  client-fingerprint: chrome
-  servername: terazhedi.info
-  ws-opts:
-    path: /sghiyws
-    headers:
-      Host: terazhedi.info
-- name: ⚡️MP-VIP2 (7)
-  type: vless
-  server: zula.ir
-  port: 443
-  uuid: 1b2c91ab-f6c9-42f8-b2c6-8de0ac133d63
-  network: ws
-  tls: true
-  udp: true
-  client-fingerprint: chrome
-  servername: terazhedi.info
-  ws-opts:
-    path: /sghiyws
-    headers:
-      Host: terazhedi.info
-- name: ⚡️MP-VIP2 (8)
-  type: vless
-  server: betty.ns.cloudflare.com
-  port: 443
-  uuid: 94daa8ad-75ed-4dbf-a6de-d05036d98df5
-  network: ws
-  tls: true
-  udp: true
-  client-fingerprint: chrome
-  servername: vangoghh.info
-  ws-opts:
-    path: /tixvuws
-    headers:
-      Host: vangoghh.info
-- name: ⚡️MP-VIP2 (9)
-  type: vless
-  server: 172.64.34.176
-  port: 443
-  uuid: 1b2c91ab-f6c9-42f8-b2c6-8de0ac133d63
-  network: ws
-  tls: true
-  udp: true
-  client-fingerprint: chrome
-  ws-opts:
-    path: /sghiyws
-    headers:
-      Host: ''
-- name: ⚡️MP-VIP2 (10)
-  type: vless
-  server: 194.150.166.134
-  port: 17166
-  uuid: 197092b3-e995-48b7-a34b-d32eb75b62e1
-  network: tcp#⚡️MP-VIP2
-  tls: false
-  udp: true
-  client-fingerprint: chrome
-- name: ⚡️MP-VIP2 (11)
-  type: vless
-  server: fn11.irsbv2.ir
-  port: 443
-  uuid: 47867494-9509-4c32-a90a-e9253b033279
-  network: ws#⚡️MP-VIP2
-  tls: false
-  udp: true
-  client-fingerprint: chrome
-  servername: cloudflare.com
-- name: ⚡️MP-VIP2 (12)
-  type: vless
-  server: brenna.ns.cloudflare.com
-  port: 443
-  uuid: 1b2c91ab-f6c9-42f8-b2c6-8de0ac133d63
-  network: ws
-  tls: true
-  udp: true
-  client-fingerprint: chrome
-  servername: terazhedi.info
-  ws-opts:
-    path: /sghiyws
-    headers:
-      Host: terazhedi.info
-- name: ⚡️MP-VIP2 (13)
-  type: vless
-  server: brenna.ns.cloudflare.com
-  port: 443
-  uuid: 1b2c91ab-f6c9-42f8-b2c6-8de0ac133d63
-  network: ws
-  tls: true
-  udp: true
-  client-fingerprint: chrome
-  ws-opts:
-    path: /sghiyws
-    headers:
-      Host: ''
-- name: ⚡️MP-VIP2 (14)
-  type: vless
-  server: 108.162.194.176
-  port: 443
-  uuid: 1b2c91ab-f6c9-42f8-b2c6-8de0ac133d63
-  network: ws
-  tls: true
-  udp: true
-  client-fingerprint: chrome
-  servername: terazhedi.info
-  ws-opts:
-    path: /sghiyws
-    headers:
-      Host: terazhedi.info
-- name: ⚡️MP-VIP2 (15)
-  type: vless
-  server: 179.61.251.78
-  port: 443
-  uuid: fabc8a38-76c5-48fe-ada7-a9e52dd16225
-  network: tcp
-  tls: true
-  udp: true
-  client-fingerprint: chrome
-  flow: xtls-rprx-vision
-- name: ⚡️MP-VIP2 (16)
-  type: vless
-  server: clyde.ns.cloudflare.com
-  port: 443
-  uuid: 02e46039-200d-4ae4-ac90-b0d619f72034
-  network: ws
-  tls: true
-  udp: true
-  client-fingerprint: chrome
-  servername: redlabell.info
-  ws-opts:
-    path: /aafeuws
-    headers:
-      Host: redlabell.info
-- name: ⚡️MP-VIP2 (17)
-  type: vless
-  server: 209.38.168.122
-  port: 21250
-  uuid: 69239696-f17e-4eb2-a337-7ce07d65d23d
-  network: grpc
-  tls: false
-  udp: true
-  client-fingerprint: chrome
-- name: ⚡️MP-VIP2 (18)
-  type: vless
-  server: 151.101.25.242
-  port: 80
-  uuid: 240026c6-3e97-4050-926d-8c2d06bd75c9
-  network: xhttp#⚡️MP-VIP2
-  tls: false
-  udp: true
-  client-fingerprint: chrome
-  servername: jetfr228.global.ssl.fastly.net
-- name: ⚡️MP-VIP2 (19)
-  type: vless
-  server: 194.182.79.105
-  port: 23919
-  uuid: 6440c04a-a2b5-41b7-9f23-545456f6cba2
-  network: grpc
-  tls: false
-  udp: true
-  client-fingerprint: chrome
-- name: ⚡️MP-VIP2 (20)
-  type: vless
-  server: am288.amin-1.ir
-  port: 2082
-  uuid: 1ad8e2eb-d5a7-4397-a9f6-c5d7f09a849d
-  network: xhttp#⚡️MP-VIP2
-  tls: false
-  udp: true
-  client-fingerprint: chrome
-  servername: am288.amin-1.ir
-- name: ⚡️MP-VIP2 (21)
-  type: vless
-  server: 151.101.25.242
-  port: 80
-  uuid: e25bd23b-22f0-4026-8883-59486d1761c5
-  network: xhttp#⚡️MP-VIP2
-  tls: false
-  udp: true
-  client-fingerprint: chrome
-  servername: jetuk43.global.ssl.fastly.net
-- name: MP-VLESS-1
+- name: MPconnection-1
   type: vless
   server: 91.149.253.167
   port: 15970
   uuid: 2c2ce61d-92de-4274-9b62-d8c66ac4ba65
-  network: tcp#MP-VLESS-1
+  network: tcp#MPconnection-1
   tls: false
   udp: true
   client-fingerprint: chrome
-- name: MP-VLESS-2
+- name: MPconnection-2
   type: vless
   server: 91.149.253.151
   port: 15970
   uuid: 451e4cd0-a3a6-43d8-b4cf-1e7f9b41aed9
-  network: tcp#MP-VLESS-2
+  network: tcp#MPconnection-2
   tls: false
   udp: true
   client-fingerprint: chrome
-- name: MP-VMESS-6
+- name: MPconnection-6
   type: vless
   server: 91.149.253.167
   port: 8443
   uuid: 36df8d37-abc1-4e68-a639-0d6cc710cb63
-  network: tcp#MP-VMESS-6
+  network: tcp#MPconnection-6
   tls: false
   udp: true
   client-fingerprint: chrome
-- name: MP-VMESS-7
+- name: MPconnection-7
   type: vless
   server: 91.149.253.151
   port: 8443
   uuid: 871734c7-61d2-440d-81fa-b43826a1d97e
-  network: tcp#MP-VMESS-7
+  network: tcp#MPconnection-7
   tls: false
   udp: true
   client-fingerprint: chrome
-- name: MP
+- name: ✅ @MPconnection (نت ملی)
   type: vless
-  server: 167.99.201.104
+  server: 25.26.27.158
+  port: 2096
+  uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
+  network: ws
+  tls: true
+  udp: true
+  client-fingerprint: chrome
+  servername: sni.111000.v6.army
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: sni.111000.v6.army
+- name: ✅ @MPconnection (نت ملی) (2)
+  type: vless
+  server: 25.26.27.158
+  port: 2096
+  uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
+  network: ws
+  tls: true
+  udp: true
+  client-fingerprint: chrome
+  servername: sni.111000.de5.net
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: sni.111000.de5.net
+- name: ✅ @MPconnection (نت ملی) (3)
+  type: vless
+  server: 151.101.3.8
+  port: 80
+  uuid: dd0cfef0-fda9-47ec-8a65-49d7bc004f82
+  network: ws#✅ @MPconnection (نت ملی)
+  tls: false
+  udp: true
+  client-fingerprint: chrome
+  servername: mitivpn.global.ssl.fastly.net
+- name: ✅ @MPconnection (نت ملی) (4)
+  type: vless
+  server: maxa19.gatesrev.ir
+  port: 8080
+  uuid: ec6901a9-0837-4d55-a29b-f5623d138af7
+  network: tcp
+  tls: true
+  udp: true
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+- name: ✅ @MPconnection (نت ملی) (5)
+  type: vless
+  server: 25.129.199.148
+  port: 2096
+  uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
+  network: ws
+  tls: true
+  udp: true
+  client-fingerprint: chrome
+  servername: sni.111000.v6.rocks
+  ws-opts:
+    path: /?ed=2560&Telegram🇨🇳 @WangCai2
+    headers:
+      Host: sni.111000.v6.rocks
+- name: ✅ @MPconnection (نت ملی) (6)
+  type: vless
+  server: dl.mglinux.ir
+  port: 2099
+  uuid: a3b6a3b7-ecb0-4957-bee4-ef82d01757d1
+  network: ws#✅ @MPconnection (نت ملی)
+  tls: false
+  udp: true
+  client-fingerprint: chrome
+  servername: www.speedtest.net
+- name: ✅ @MPconnection (نت ملی) (7)
+  type: vless
+  server: partners.dissertationhelpspecialist.com
   port: 443
-  uuid: 976ca50a-008a-4cca-b581-cf48b53d8833
+  uuid: 48197b65-e40d-4767-9a50-82e666936594
+  network: grpc
+  tls: true
+  udp: true
+  client-fingerprint: chrome
+- name: ✅ @MPconnection (نت ملی) (8)
+  type: vless
+  server: ipv.aiteamplus.ir
+  port: 10100
+  uuid: e728ebb5-fc0d-4feb-ad44-dfaea0d01dcd
+  network: tcp
+  tls: true
+  udp: true
+  client-fingerprint: chrome
+- name: ✅ @MPconnection (نت ملی) (9)
+  type: vless
+  server: maxb17.musicdoon.ir
+  port: 8080
+  uuid: 2c7a2b04-ad16-484b-b0e4-739cd06b650f
+  network: tcp
+  tls: true
+  udp: true
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+- name: ✅ @MPconnection (نت ملی) (10)
+  type: vless
+  server: qa.itekgroup.com
+  port: 8443
+  uuid: e728ebb5-fc0d-4feb-ad44-dfaea0d01dcd
+  network: ws#✅ @MPconnection (نت ملی)
+  tls: false
+  udp: true
+  client-fingerprint: chrome
+  servername: www.speedtest.net
+- name: ✅ @MPconnection (نت ملی) (11)
+  type: vless
+  server: ipv.aiteamplus.ir
+  port: 10700
+  uuid: e728ebb5-fc0d-4feb-ad44-dfaea0d01dcd
+  network: tcp
+  tls: true
+  udp: true
+  client-fingerprint: chrome
+- name: ✅ @MPconnection (نت ملی) (12)
+  type: vless
+  server: ipv.aiteamplus.ir
+  port: 10500
+  uuid: e728ebb5-fc0d-4feb-ad44-dfaea0d01dcd
+  network: tcp
+  tls: true
+  udp: true
+  client-fingerprint: chrome
+- name: ✅ @MPconnection (نت ملی) (13)
+  type: vless
+  server: statue.lnmarketplace.net
+  port: 443
+  uuid: 7c63f43f-f526-49bb-b5c8-2be26e11ef00
   network: xhttp
   tls: true
   udp: true
   client-fingerprint: chrome
+  servername: statue.lnmarketplace.net
   ws-opts:
-    path: /farasati1
+    path: /statue
     headers:
-      Host: ''
-- name: MP (2)
+      Host: statue.lnmarketplace.net
+- name: ✅ @MPconnection (نت ملی) (14)
   type: vless
-  server: 65.109.179.24
+  server: cdn.turbooserver.com
+  port: 80
+  uuid: turboo-server
+  network: ws#✅ @MPconnection (نت ملی)
+  tls: false
+  udp: true
+  client-fingerprint: chrome
+  servername: jone-turboo-server.com
+- name: ✅ @MPconnection (نت ملی) (15)
+  type: vless
+  server: iran.zanbor.de
+  port: 8062
+  uuid: f93b3a1b-ad96-490d-8836-3b4899053c6c
+  network: tcp#✅ @MPconnection (نت ملی)
+  tls: false
+  udp: true
+  client-fingerprint: chrome
+- name: ✅ @MPconnection (نت ملی) (16)
+  type: vless
+  server: cdn.aiteamplus.ir
+  port: 11600
+  uuid: e728ebb5-fc0d-4feb-ad44-dfaea0d01dcd
+  network: tcp#✅ @MPconnection (نت ملی)
+  tls: false
+  udp: true
+  client-fingerprint: chrome
+  servername: igap.net
+- name: ✅ @MPconnection (نت ملی) (17)
+  type: vless
+  server: Evay_vpn.fast.hosting-ip.com
+  port: 80
+  uuid: d03d8fc0-23ce-461a-97fa-2a7e0a66d8db
+  network: ws#✅ @MPconnection (نت ملی)
+  tls: false
+  udp: true
+  client-fingerprint: chrome
+  servername: norbert-team-free1.global.ssl.fastly.net
+- name: ✅ @MPconnection (نت ملی) (18)
+  type: vless
+  server: statue.lnmarketplace.net
   port: 443
-  uuid: 2250c971-16ea-4a1e-bbad-3f0460ea8e84
+  uuid: 7c63f43f-f526-49bb-b5c8-2be26e11ef00
   network: xhttp
   tls: true
   udp: true
   client-fingerprint: chrome
+  servername: statue.lnmarketplace.net
   ws-opts:
-    path: /farasati1
+    path: /statue
     headers:
-      Host: ''
-- name: MP (3)
+      Host: statue.lnmarketplace.net
+- name: ✅ @MPconnection (نت ملی) (19)
   type: vless
-  server: 46.101.93.252
+  server: 25.129.199.148
+  port: 2096
+  uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
+  network: ws
+  tls: true
+  udp: true
+  client-fingerprint: chrome
+  servername: sni.111000.v6.rocks
+  ws-opts:
+    path: /?ed=2560&Telegram🇨🇳+@WangCai2
+    headers:
+      Host: sni.111000.v6.rocks
+- name: ✅ @MPconnection (نت ملی) (20)
+  type: vless
+  server: 25.129.197.138
+  port: 2096
+  uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
+  network: ws
+  tls: true
+  udp: true
+  client-fingerprint: chrome
+  servername: sni.111000.de5.net
+  ws-opts:
+    path: /?ed=2560&Telegram@V2rayAlpha
+    headers:
+      Host: sni.111000.de5.net
+- name: ✅ @MPconnection (نت ملی) (21)
+  type: vless
+  server: 176.109.109.58
+  port: 8443
+  uuid: bc32639e-100a-40ad-b064-b0829a0bd197
+  network: tcp
+  tls: true
+  udp: true
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  servername: '---@External_Net---@External_Net---@External_Net---@External_Net---@External_Net'
+- name: ✅ @MPconnection (نت ملی) (22)
+  type: vless
+  server: 25.26.27.158
+  port: 2096
+  uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
+  network: ws
+  tls: true
+  udp: true
+  client-fingerprint: chrome
+  servername: sni.111000.de5.net
+  ws-opts:
+    path: /?ed=2560&Telegram@ATLAS_V2VPN
+    headers:
+      Host: sni.111000.de5.net
+- name: ✅ @MPconnection (نت ملی) (23)
+  type: vless
+  server: 64.188.64.234
   port: 443
-  uuid: 29f51ede-e474-4a4a-8ceb-b963d22535a8
+  uuid: 7c63f43f-f526-49bb-b5c8-2be26e11ef00
   network: xhttp
   tls: true
   udp: true
   client-fingerprint: chrome
+  servername: statue.lnmarketplace.net
   ws-opts:
-    path: /farasati1
+    path: /statue
     headers:
-      Host: ''
-- name: MP (4)
+      Host: statue.lnmarketplace.net
+- name: ✅ @MPconnection (نت ملی) (24)
   type: vless
-  server: 65.109.208.201
+  server: 64.188.64.234
   port: 443
-  uuid: b46fc521-a96f-40e6-b93f-83895d4dfb70
+  uuid: 7c63f43f-f526-49bb-b5c8-2be26e11ef00
   network: xhttp
   tls: true
   udp: true
   client-fingerprint: chrome
+  servername: statue.lnmarketplace.net
   ws-opts:
-    path: /farasati1
+    path: /statue
     headers:
-      Host: ''
-- name: MP (5)
-  type: vless
-  server: 167.71.135.45
-  port: 443
-  uuid: a594e4e9-b6ea-4ce7-8ff3-4f925fdbae4b
-  network: xhttp
-  tls: true
-  udp: true
-  client-fingerprint: chrome
-  ws-opts:
-    path: /farasati1
-    headers:
-      Host: ''
-- name: MP (6)
-  type: vless
-  server: 65.109.205.236
-  port: 443
-  uuid: 7630b9a6-da6c-472e-aab0-6d4572f89862
-  network: xhttp
-  tls: true
-  udp: true
-  client-fingerprint: chrome
-  ws-opts:
-    path: /farasati1
-    headers:
-      Host: ''
-- name: MP (7)
-  type: vless
-  server: 91.107.131.141
-  port: 443
-  uuid: a72e56ef-b52e-4506-860d-b6f7e481fdae
-  network: xhttp
-  tls: true
-  udp: true
-  client-fingerprint: chrome
-  ws-opts:
-    path: /farasati1
-    headers:
-      Host: ''
-- name: MP (8)
-  type: vless
-  server: 188.166.174.44
-  port: 443
-  uuid: 798f8675-1b00-4b0b-81e3-4b2fc03ed900
-  network: xhttp
-  tls: true
-  udp: true
-  client-fingerprint: chrome
-  ws-opts:
-    path: /farasati1
-    headers:
-      Host: ''
-- name: MP (9)
-  type: vless
-  server: 91.107.180.62
-  port: 443
-  uuid: 72d64ac4-2c27-477f-a7d4-c662cba303ba
-  network: xhttp
-  tls: true
-  udp: true
-  client-fingerprint: chrome
-  ws-opts:
-    path: /farasati1
-    headers:
-      Host: ''
-- name: MP (10)
-  type: vless
-  server: 139.59.172.10
-  port: 443
-  uuid: 84653bd9-8414-4bb3-8787-f143ba34c23d
-  network: xhttp
-  tls: true
-  udp: true
-  client-fingerprint: chrome
-  ws-opts:
-    path: /farasati1
-    headers:
-      Host: ''
-- name: MP (11)
-  type: vless
-  server: 91.107.179.107
-  port: 443
-  uuid: 1665faa1-3e2f-4b09-8d8b-9954d80781bc
-  network: xhttp
-  tls: true
-  udp: true
-  client-fingerprint: chrome
-  ws-opts:
-    path: /farasati1
-    headers:
-      Host: ''
-- name: MP (12)
-  type: vless
-  server: 134.209.191.114
-  port: 443
-  uuid: fcc0c1c3-f3da-4d1a-b52c-30ceedda6192
-  network: xhttp
-  tls: true
-  udp: true
-  client-fingerprint: chrome
-  ws-opts:
-    path: /farasati1
-    headers:
-      Host: ''
-- name: MP (13)
-  type: vless
-  server: 5.75.203.109
-  port: 443
-  uuid: bc548a10-4e64-4358-bf6f-da945653ae0e
-  network: xhttp
-  tls: true
-  udp: true
-  client-fingerprint: chrome
-  ws-opts:
-    path: /farasati1
-    headers:
-      Host: ''
-- name: MP (14)
-  type: vless
-  server: 5.75.206.206
-  port: 443
-  uuid: d58aaedb-5f94-4c25-b3f4-40b6846f8caa
-  network: xhttp
-  tls: true
-  udp: true
-  client-fingerprint: chrome
-  ws-opts:
-    path: /farasati1
-    headers:
-      Host: ''
-- name: MP (15)
-  type: vless
-  server: 5.75.201.97
-  port: 443
-  uuid: 7aef7784-53f7-4416-aff7-e2538c271010
-  network: xhttp
-  tls: true
-  udp: true
-  client-fingerprint: chrome
-  ws-opts:
-    path: /farasati1
-    headers:
-      Host: ''
-- name: MP (16)
-  type: vless
-  server: 91.107.139.205
-  port: 443
-  uuid: 6c240c9d-df74-42e9-a66b-5aaa4921f1e9
-  network: xhttp
-  tls: true
-  udp: true
-  client-fingerprint: chrome
-  ws-opts:
-    path: /farasati1
-    headers:
-      Host: ''
+      Host: statue.lnmarketplace.net
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -499,60 +325,47 @@ proxy-groups:
   interval: 300
   tolerance: 100
   proxies:
-  - ⚡️MP-VIP2
-  - ⚡️MP-VIP2 (2)
-  - ⚡️MP-VIP2 (3)
-  - ⚡️MP-VIP2 (4)
-  - ⚡️MP-VIP2 (5)
-  - ⚡️MP-VIP2 (6)
-  - ⚡️MP-VIP2 (7)
-  - ⚡️MP-VIP2 (8)
-  - ⚡️MP-VIP2 (9)
-  - ⚡️MP-VIP2 (10)
-  - ⚡️MP-VIP2 (11)
-  - ⚡️MP-VIP2 (12)
-  - ⚡️MP-VIP2 (13)
-  - ⚡️MP-VIP2 (14)
-  - ⚡️MP-VIP2 (15)
-  - ⚡️MP-VIP2 (16)
-  - ⚡️MP-VIP2 (17)
-  - ⚡️MP-VIP2 (18)
-  - ⚡️MP-VIP2 (19)
-  - ⚡️MP-VIP2 (20)
-  - ⚡️MP-VIP2 (21)
-  - MP-VLESS-1
-  - MP-VLESS-2
-  - MP-VMESS-6
-  - MP-VMESS-7
-  - MP
-  - MP (2)
-  - MP (3)
-  - MP (4)
-  - MP (5)
-  - MP (6)
-  - MP (7)
-  - MP (8)
-  - MP (9)
-  - MP (10)
-  - MP (11)
-  - MP (12)
-  - MP (13)
-  - MP (14)
-  - MP (15)
-  - MP (16)
+  - MPconnection-1
+  - MPconnection-2
+  - MPconnection-6
+  - MPconnection-7
+  - ✅ @MPconnection (نت ملی)
+  - ✅ @MPconnection (نت ملی) (2)
+  - ✅ @MPconnection (نت ملی) (3)
+  - ✅ @MPconnection (نت ملی) (4)
+  - ✅ @MPconnection (نت ملی) (5)
+  - ✅ @MPconnection (نت ملی) (6)
+  - ✅ @MPconnection (نت ملی) (7)
+  - ✅ @MPconnection (نت ملی) (8)
+  - ✅ @MPconnection (نت ملی) (9)
+  - ✅ @MPconnection (نت ملی) (10)
+  - ✅ @MPconnection (نت ملی) (11)
+  - ✅ @MPconnection (نت ملی) (12)
+  - ✅ @MPconnection (نت ملی) (13)
+  - ✅ @MPconnection (نت ملی) (14)
+  - ✅ @MPconnection (نت ملی) (15)
+  - ✅ @MPconnection (نت ملی) (16)
+  - ✅ @MPconnection (نت ملی) (17)
+  - ✅ @MPconnection (نت ملی) (18)
+  - ✅ @MPconnection (نت ملی) (19)
+  - ✅ @MPconnection (نت ملی) (20)
+  - ✅ @MPconnection (نت ملی) (21)
+  - ✅ @MPconnection (نت ملی) (22)
+  - ✅ @MPconnection (نت ملی) (23)
+  - ✅ @MPconnection (نت ملی) (24)
 - name: SELECT
   type: select
   proxies:
   - AUTO
-  - ⚡️MP-VIP2
-  - ⚡️MP-VIP2 (2)
-  - ⚡️MP-VIP2 (3)
-  - ⚡️MP-VIP2 (4)
-  - ⚡️MP-VIP2 (5)
-  - ⚡️MP-VIP2 (6)
-  - ⚡️MP-VIP2 (7)
-  - ⚡️MP-VIP2 (8)
-  - ⚡️MP-VIP2 (9)
-  - ⚡️MP-VIP2 (10)
+  - MPconnection-1
+  - MPconnection-2
+  - MPconnection-6
+  - MPconnection-7
+  - ✅ @MPconnection (نت ملی)
+  - ✅ @MPconnection (نت ملی) (2)
+  - ✅ @MPconnection (نت ملی) (3)
+  - ✅ @MPconnection (نت ملی) (4)
+  - ✅ @MPconnection (نت ملی) (5)
+  - ✅ @MPconnection (نت ملی) (6)
 rules:
 - MATCH,SELECT
