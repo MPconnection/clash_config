@@ -1,726 +1,162 @@
-mixed-port: 7890
+port: 7890
+socks-port: 7891
+redir-port: 7892
 allow-lan: true
 mode: rule
-log-level: silent
+log-level: info
+external-controller: 127.0.0.1:9090
+
 dns:
   enable: true
+  ipv6: false
+  default-nameserver:
+    - 1.1.1.1
+    - 8.8.8.8
   enhanced-mode: fake-ip
   nameserver:
-  - 1.1.1.1
-  - 8.8.8.8
+    - https://1.1.1.1/dns-query
+    - https://8.8.8.8/dns-query
+
+####################
+# PROXIES
+####################
 proxies:
-- name: MPconnection
-  type: trojan
-  server: 172.64.145.38
-  port: 8443
-  password: 1egf751v52w6
-  udp: true
-  sni: konbu3yh7or1gdj6win7zyxp9e6h3ndhfpr6snxzhh.zjde5.de5.net
-- name: MPconnection_1
-  type: vless
-  server: 104.17.162.123
-  port: 8443
-  uuid: 83f03646-fb28-44cc-9d2c-8853f6c09285
-  udp: true
-  network: ws
-  tls: true
-  servername: r4fnviw9jl4i4rx.zjde5.de5.net
-  ws-opts:
-    path: /?ed=#TELEGRAM-Yam?ed=512
-    headers:
-      Host: r4fnviw9jl4i4rx.zjde5.de5.net
-- name: MPconnection_2
-  type: vless
-  server: 66.81.247.155
-  port: 443
-  uuid: 4525c260-df3c-4f62-b8f1-f4f5f305694b
-  udp: true
-  network: ws
-  tls: true
-  servername: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net
-  ws-opts:
-    path: /?ed=#?ed=512
-    headers:
-      Host: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net
-- name: MPconnection_3
-  type: trojan
-  server: 172.64.145.18
-  port: 8443
-  password: 7a5fwj8eye7s
-  udp: true
-  sni: wd73uardmf9arlztris4hp6rt06k3166qnnlhah1ii8mvxuw2y6ssnfbrh6o.zjde5.de5.net
-- name: MPconnection_4
-  type: vless
-  server: gra.ipcl0ud.com
-  port: 443
-  uuid: 70f7b45a-dbf8-42a1-adc3-3e9124591c98
-  udp: true
-  network: tcp
-  tls: true
-  servername: jetbrains.com
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: ecfRlCGezg7UQ-iyJAdmtzhswMYOrXYO1ROLVdvhhl0
-    short-id: fd1dff035d0d8f56
-- name: MPconnection_5
-  type: vless
-  server: cdn.bio4cdn.com
-  port: 2053
-  uuid: 2e46ba5a-db56-4940-9500-a61c7b0bcc0c
-  udp: true
-  network: ws
-  tls: true
-  servername: bio.bio4cdn.com
-  ws-opts:
-    path: /weborder
-    headers:
-      Host: bio.bio4cdn.com
-- name: MPconnection_6
-  type: vless
-  server: 104.17.166.123
-  port: 8443
-  uuid: 829658bf-03c4-4c28-81e9-dd6ea141b2d0
-  udp: true
-  network: ws
-  tls: true
-  servername: 5jq7fvwpqt5owo2fi198sa6qoxznkzfea7en4m3xroeqrt3u3q.zjde5.de5.net
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: 5jq7fvwpqt5owo2fi198sa6qoxznkzfea7en4m3xroeqrt3u3q.zjde5.de5.net
-- name: MPconnection_7
-  type: vless
-  server: 172.64.145.38
-  port: 8443
-  uuid: 5fd4bd07-bac9-47a4-93de-16473159876b
-  udp: true
-  network: ws
-  tls: true
-  servername: gslkk28g25ow5r1a4nwg0fq0fp0u1jbpyy77uuxp2tmnzukcr1qvdz2x3dx.zjde5.de5.net
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: gslkk28g25ow5r1a4nwg0fq0fp0u1jbpyy77uuxp2tmnzukcr1qvdz2x3dx.zjde5.de5.net
-- name: MPconnection_8
-  type: vless
-  server: 104.17.162.123
-  port: 8443
-  uuid: 83f03646-fb28-44cc-9d2c-8853f6c09285
-  udp: true
-  network: ws
-  tls: true
-  servername: r4fnviw9jl4i4rx.zjde5.de5.net
-  ws-opts:
-    path: /?ed=#TELEGRAM-VPNMAAN_VPNMAAN_VPNMAAN_VPNMAAN_VPNMAAN?ed=512
-    headers:
-      Host: r4fnviw9jl4i4rx.zjde5.de5.net
-- name: MPconnection_9
-  type: vless
-  server: 66.81.247.155
-  port: 443
-  uuid: 4525c260-df3c-4f62-b8f1-f4f5f305694b
-  udp: true
-  network: ws
-  tls: true
-  servername: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net
-  ws-opts:
-    path: /?ed=#TELEGRAM-YamYamProxy_YamYamProxy_YamYamProxy_YamYamProxy_YamYamProxy?ed=512
-    headers:
-      Host: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net
-- name: MPconnection_10
-  type: vless
-  server: 66.81.247.155
-  port: 443
-  uuid: 4525c260-df3c-4f62-b8f1-f4f5f305694b
-  udp: true
-  network: ws
-  tls: true
-  servername: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net
-  ws-opts:
-    path: /?ed=#TELEGRAM-ICV2RAY_ICV2RAY_ICV2RAY_ICV2RAY_ICV2RAY?ed=512
-    headers:
-      Host: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net
-- name: MPconnection_11
-  type: trojan
-  server: 172.64.154.125
-  port: 8443
-  password: z3rqndeos4nh
-  udp: true
-  sni: 566n4gjxgs6erko5jep85cltuyrqdospuafzkxqlrukpwg3ww2.zjde5.de5.net
-- name: MPconnection_12
-  type: trojan
-  server: 104.17.166.123
-  port: 8443
-  password: f6apy2t8ze0w
-  udp: true
-  sni: gwb8zasq75zp0vkeyrhtufsppgrbto2udnsxlyanl2e3froihncjjfrb.zjde5.de5.net
-- name: MPconnection_13
-  type: vless
-  server: 104.17.162.123
-  port: 8443
-  uuid: 83f03646-fb28-44cc-9d2c-8853f6c09285
-  udp: true
-  network: ws
-  tls: true
-  servername: r4fnviw9jl4i4rx.zjde5.de5.net
-  ws-opts:
-    path: /
-    headers:
-      Host: r4fnviw9jl4i4rx.zjde5.de5.net
-- name: MPconnection_14
-  type: vless
-  server: 66.81.247.155
-  port: 443
-  uuid: 4525c260-df3c-4f62-b8f1-f4f5f305694b
-  udp: true
-  network: ws
-  tls: true
-  servername: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net
-  ws-opts:
-    path: ?ed
-    headers:
-      Host: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net
-- name: MPconnection_15
-  type: trojan
-  server: 104.17.163.123
-  port: 8443
-  password: x79svebo1f7b
-  udp: true
-  sni: 5m2b654fvfrv.zjde5.de5.net
-- name: MPconnection_16
-  type: vless
-  server: 172.64.149.99
-  port: 8443
-  uuid: 2ddeb056-17d4-421e-a318-39428733d4a2
-  udp: true
-  network: ws
-  tls: true
-  servername: 8p3cfl0ripm.zjde5.de5.net
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: 8p3cfl0ripm.zjde5.de5.net
-- name: MPconnection_17
-  type: vless
-  server: 172.64.154.125
-  port: 8443
-  uuid: c72b67c0-9179-44e0-9a12-1b0ad9e6f556
-  udp: true
-  network: ws
-  tls: true
-  servername: 8iwpz0mfftbsw8s90q6bc0rto.zjde5.de5.net
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: 8iwpz0mfftbsw8s90q6bc0rto.zjde5.de5.net
-- name: MPconnection_18
-  type: vless
-  server: 104.17.162.123
-  port: 8443
-  uuid: 83f03646-fb28-44cc-9d2c-8853f6c09285
-  udp: true
-  network: ws
-  tls: true
-  servername: r4fnviw9jl4i4rx.zjde5.de5.net
-  ws-opts:
-    path: /?ed=#TELEGRAM-ICV2RAY_ICV2RAY_ICV2RAY_ICV2RAY_ICV2RAY?ed=512
-    headers:
-      Host: r4fnviw9jl4i4rx.zjde5.de5.net
-- name: MPconnection_19
-  type: vless
-  server: 104.17.165.123
-  port: 8443
-  uuid: 1a6a27ba-e087-4a84-a038-aecd8a25a86e
-  udp: true
-  network: ws
-  tls: true
-  servername: x6wg6r95gt8a53cr4yi9duze3wgnajbbjk10tphgfphrxx1kmb1awoz.zjde5.de5.net
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: x6wg6r95gt8a53cr4yi9duze3wgnajbbjk10tphgfphrxx1kmb1awoz.zjde5.de5.net
-- name: MPconnection_20
-  type: vless
-  server: 172.64.145.38
-  port: 8443
-  uuid: bb8c74a1-abc1-4511-b100-9876e30cb65c
-  udp: true
-  network: ws
-  tls: true
-  servername: xfjd79v2tjscrm6jqo.zjde5.de5.net
-  ws-opts:
-    path: /?ed=#TELEGRAM-MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI?ed=512
-    headers:
-      Host: xfjd79v2tjscrm6jqo.zjde5.de5.net
-- name: MPconnection_21
-  type: trojan
-  server: www.visa.com
-  port: 8443
-  password: okna73k5vt25
-  udp: true
-  sni: mmteffux9bx6x1tujfzkrqzlh8809.zjde5.de5.net
-- name: MPconnection_22
-  type: vless
-  server: 104.17.162.123
-  port: 8443
-  uuid: 83f03646-fb28-44cc-9d2c-8853f6c09285
-  udp: true
-  network: ws
-  tls: true
-  servername: r4fnviw9jl4i4rx.zjde5.de5.net
-  ws-opts:
-    path: /?ed=#TELEGRAM-MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI?ed=512
-    headers:
-      Host: r4fnviw9jl4i4rx.zjde5.de5.net
-- name: MPconnection_23
-  type: vless
-  server: www.visa.com
-  port: 8443
-  uuid: 9466a855-5ba0-4d2e-a6e6-a5c1b77c621b
-  udp: true
-  network: ws
-  tls: true
-  servername: udt5efr85af1qg64s4qh8jmwakiqrgyyxvm2kc2w.zjde5.de5.net
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: udt5efr85af1qg64s4qh8jmwakiqrgyyxvm2kc2w.zjde5.de5.net
-- name: MPconnection_24
-  type: trojan
-  server: 172.64.153.22
-  port: 8443
-  password: 9iuw92dfpvlm
-  udp: true
-  sni: ob85lxpyonvy4y1crfcx2wrmrr.zjde5.de5.net
-- name: MPconnection_25
-  type: vless
-  server: 104.17.162.123
-  port: 8443
-  uuid: 83f03646-fb28-44cc-9d2c-8853f6c09285
-  udp: true
-  network: ws
-  tls: true
-  servername: r4fnviw9jl4i4rx.zjde5.de5.net
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: r4fnviw9jl4i4rx.zjde5.de5.net
-- name: MPconnection_26
-  type: vless
-  server: 66.81.247.155
-  port: 443
-  uuid: 4525c260-df3c-4f62-b8f1-f4f5f305694b
-  udp: true
-  network: ws
-  tls: true
-  servername: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net
-  ws-opts:
-    path: /?ed
-    headers:
-      Host: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net
-- name: MPconnection_27
-  type: trojan
-  server: 172.64.149.99
-  port: 8443
-  password: tw04krrjv1m6
-  udp: true
-  sni: yn3l39ghsfzlhk1xh0pbywn3rtfr2.zjde5.de5.net
-- name: MPconnection_28
-  type: vless
-  server: 104.17.166.123
-  port: 8443
-  uuid: d31efa40-0d96-4040-9789-0d5910670fe5
-  udp: true
-  network: ws
-  tls: true
-  servername: u2zazy8ncky89ay8ahiet1ydi9fucb5dgfbrp5recn9n.zjde5.de5.net
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: u2zazy8ncky89ay8ahiet1ydi9fucb5dgfbrp5recn9n.zjde5.de5.net
-- name: MPconnection_29
-  type: vless
-  server: 104.17.164.123
-  port: 8443
-  uuid: 16bb01c3-442b-4b09-8935-088bf50283f8
-  udp: true
-  network: ws
-  tls: true
-  servername: uqe0k8eq1y1werf27q2uz2m3v6rm1maloour.zjde5.de5.net
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: uqe0k8eq1y1werf27q2uz2m3v6rm1maloour.zjde5.de5.net
-- name: MPconnection_30
-  type: vless
-  server: 172.64.153.22
-  port: 8443
-  uuid: e53a92c7-4a78-49cc-ab01-917661058b9a
-  udp: true
-  network: ws
-  tls: true
-  servername: egaxhxw0p031z8iyfgjt9fyhhb1hwj4vr3gn0xoxqu901o8ruij.zjde5.de5.net
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: egaxhxw0p031z8iyfgjt9fyhhb1hwj4vr3gn0xoxqu901o8ruij.zjde5.de5.net
-- name: MPconnection_31
-  type: vless
-  server: 172.64.145.18
-  port: 8443
-  uuid: 7602a5bf-e163-418e-87d0-2e72f531800d
-  udp: true
-  network: ws
-  tls: true
-  servername: eat86xanttp3f0xoryl5.zjde5.de5.net
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: eat86xanttp3f0xoryl5.zjde5.de5.net
-- name: MPconnection_32
-  type: vless
-  server: 104.17.165.123
-  port: 8443
-  uuid: f85f60b1-2b96-49e9-8bde-b656d1516df0
-  udp: true
-  network: ws
-  tls: true
-  servername: gx8rw8fz783ncefn332y7uyfsvb59o820mryrxu1cj19jiuuur.zjde5.de5.net
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: gx8rw8fz783ncefn332y7uyfsvb59o820mryrxu1cj19jiuuur.zjde5.de5.net
-- name: MPconnection_33
-  type: vless
-  server: 104.17.162.123
-  port: 8443
-  uuid: b56472a0-a042-4d68-872b-b7b4388fd82f
-  udp: true
-  network: ws
-  tls: true
-  servername: kc8z2qnbff17ve5nyn53zqyyobsebcmvkyaklw4kdqw6bntvmfrxqx6j00zo.zjde5.de5.net
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: kc8z2qnbff17ve5nyn53zqyyobsebcmvkyaklw4kdqw6bntvmfrxqx6j00zo.zjde5.de5.net
-- name: MPconnection_34
-  type: vless
-  server: 104.17.162.123
-  port: 8443
-  uuid: 83f03646-fb28-44cc-9d2c-8853f6c09285
-  udp: true
-  network: ws
-  tls: true
-  servername: r4fnviw9jl4i4rx.zjde5.de5.net
-  ws-opts:
-    path: /?ed=#TELEGRAM-YamYamProxy_YamYamProxy_YamYamProxy_YamYamProxy_YamYamProxy?ed=512
-    headers:
-      Host: r4fnviw9jl4i4rx.zjde5.de5.net
-- name: MPconnection_35
-  type: vless
-  server: 104.17.162.123
-  port: 8443
-  uuid: 83f03646-fb28-44cc-9d2c-8853f6c09285
-  udp: true
-  network: ws
-  tls: true
-  servername: r4fnviw9jl4i4rx.zjde5.de5.net
-  ws-opts:
-    path: /?ed=#Join---i10VPN---Join---i10VPN---Join---i10VPN---Join---i10VPN?ed=512
-    headers:
-      Host: r4fnviw9jl4i4rx.zjde5.de5.net
-- name: MPconnection_36
-  type: vless
-  server: 66.81.247.155
-  port: 443
-  uuid: 4525c260-df3c-4f62-b8f1-f4f5f305694b
-  udp: true
-  network: ws
-  tls: true
-  servername: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net
-  ws-opts:
-    path: /?ed=#TELEGRAM-MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI?ed=512
-    headers:
-      Host: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net
-- name: MPconnection_37
-  type: vless
-  server: 104.17.162.123
-  port: 8443
-  uuid: 83f03646-fb28-44cc-9d2c-8853f6c09285
-  udp: true
-  network: ws
-  tls: true
-  servername: r4fnviw9jl4i4rx.zjde5.de5.net
-  ws-opts:
-    path: /?ed=512
-    headers:
-      Host: r4fnviw9jl4i4rx.zjde5.de5.net
-- name: MPconnection_38
-  type: vless
-  server: 104.17.162.123
-  port: 8443
-  uuid: 8f1a15bf-a352-4c32-aee2-957039a6847b
-  udp: true
-  network: ws
-  tls: true
-  servername: 6nwf5rauksz8126xm.zjde5.de5.net
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: 6nwf5rauksz8126xm.zjde5.de5.net
-- name: MPconnection_39
-  type: vless
-  server: 104.17.163.123
-  port: 8443
-  uuid: 83adcc98-ac23-4e51-9ae0-788a73fd9939
-  udp: true
-  network: ws
-  tls: true
-  servername: vjv62pggz1658fuliaf9lri7rra85l8utox0kjtogve4whop.zjde5.de5.net
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: vjv62pggz1658fuliaf9lri7rra85l8utox0kjtogve4whop.zjde5.de5.net
-- name: MPconnection_40
-  type: trojan
-  server: 104.17.164.123
-  port: 8443
-  password: 3ljg5jx8ypwc
-  udp: true
-  sni: 8ifr3yt3q8f1re.zjde5.de5.net
-- name: MPconnection_41
-  type: vless
-  server: 104.17.162.123
-  port: 8443
-  uuid: 83f03646-fb28-44cc-9d2c-8853f6c09285
-  udp: true
-  network: ws
-  tls: true
-  servername: r4fnviw9jl4i4rx.zjde5.de5.net
-  ws-opts:
-    path: /?ed=#TELEGRAM-Confixio_Confixio_Confixio_Confixio_Confixio?ed=512
-    headers:
-      Host: r4fnviw9jl4i4rx.zjde5.de5.net
-- name: MPconnection_42
-  type: vless
-  server: 172.64.145.38
-  port: 8443
-  uuid: bb8c74a1-abc1-4511-b100-9876e30cb65c
-  udp: true
-  network: ws
-  tls: true
-  servername: xfjd79v2tjscrm6jqo.zjde5.de5.net
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: xfjd79v2tjscrm6jqo.zjde5.de5.net
-- name: MPconnection_43
-  type: trojan
-  server: 104.17.162.123
-  port: 8443
-  password: u2k1jh0og5vn
-  udp: true
-  sni: oq788320mz7kfruyec7b0q1l4bojfire1bp9lmu7.zjde5.de5.net
-- name: MPconnection_44
-  type: vless
-  server: 104.21.6.48
-  port: 8443
-  uuid: f85f60b1-2b96-49e9-8bde-b656d1516df0
-  udp: true
-  network: ws
-  tls: true
-  servername: gx8rw8fz783ncefn332y7uyfsvb59o820mryrxu1cj19jiuuur.zjde5.de5.net
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: gx8rw8fz783ncefn332y7uyfsvb59o820mryrxu1cj19jiuuur.zjde5.de5.net
-- name: MPconnection_45
-  type: vless
-  server: 66.81.247.155
-  port: 443
-  uuid: 4525c260-df3c-4f62-b8f1-f4f5f305694b
-  udp: true
-  network: ws
-  tls: true
-  servername: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net
-  ws-opts:
-    path: /?ed=#Join---i10VPN---Join---i10VPN---Join---i10VPN---Join---i10VPN?ed=512
-    headers:
-      Host: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net
-- name: MPconnection_46
-  type: vless
-  server: 104.17.162.123
-  port: 8443
-  uuid: 83f03646-fb28-44cc-9d2c-8853f6c09285
-  udp: true
-  network: ws
-  tls: true
-  servername: r4fnviw9jl4i4rx.zjde5.de5.net
-  ws-opts:
-    path: /?ed=?ed=512
-    headers:
-      Host: r4fnviw9jl4i4rx.zjde5.de5.net
-- name: MPconnection_47
-  type: vless
-  server: 172.64.153.235
-  port: 8443
-  uuid: f94fc28f-688f-43aa-92a0-621f6255451c
-  udp: true
-  network: ws
-  tls: true
-  servername: il8fd4w6j293nc2uzjc6xkwko6ohe43k845a76c2nl6su5q19ivkrboek9.zjde5.de5.net
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: il8fd4w6j293nc2uzjc6xkwko6ohe43k845a76c2nl6su5q19ivkrboek9.zjde5.de5.net
-- name: MPconnection_48
-  type: trojan
-  server: 104.17.165.123
-  port: 8443
-  password: 4wsc50fdyqeq
-  udp: true
-  sni: rsosx0ofzeyjahe4gb4sk16zbzqfi4r7z2ubfujth9ebgf5tli7di.zjde5.de5.net
-- name: MPconnection_49
-  type: trojan
-  server: 104.17.163.123
-  port: 8443
-  password: n875vm39ii96
-  udp: true
-  sni: fflved5b71of0dhntg2ier40sswwuydkqf.zjde5.de5.net
-- name: MPconnection_50
-  type: vless
-  server: 172.64.145.38
-  port: 8443
-  uuid: 9e685fe3-e0f9-482d-939c-200a3f89b363
-  udp: true
-  network: ws
-  tls: true
-  servername: vyznthvt7f5fr.zjde5.de5.net
-  ws-opts:
-    path: /?ed=2560fp=random
-    headers:
-      Host: vyznthvt7f5fr.zjde5.de5.net
-- name: MPconnection_51
-  type: vless
-  server: 7.zaravds.sbs
-  port: 1020
-  uuid: 2e656916-a233-43f3-b840-b8d921549201
-  udp: true
-  network: tcp
+
+  # -------- SS --------
+  - name: "SS-1"
+    type: ss
+    server: 94.156.116.213
+    port: 38019
+    cipher: chacha20-ietf-poly1305
+    password: "d4aEdL0yU1ZR2ir8I449fx8BXD5A185pSyNP8kGxSA"
+
+  - name: "SS-2"
+    type: ss
+    server: 91.149.219.117
+    port: 56397
+    cipher: chacha20-ietf-poly1305
+    password: "SB3vmiw8Ymv/yC6gNJ6kHjW/0xxsmkA/PNhWAINYXJk"
+
+  - name: "SS-3"
+    type: ss
+    server: 94.156.116.14
+    port: 57060
+    cipher: chacha20-ietf-poly1305
+    password: "AriIuhQhbWt5y549dF+4z6C8f0+VZKuQ1Zg5JvVhvhQ"
+
+  # -------- VLESS --------
+  - name: "VLESS-1"
+    type: vless
+    server: 94.156.116.29
+    port: 56936
+    uuid: 1e8ba8a9-c8af-459c-8830-e8744b051cc0
+    encryption: none
+    network: tcp
+
+  - name: "VLESS-2"
+    type: vless
+    server: 94.156.116.213
+    port: 24336
+    uuid: ad97c4a9-e448-47f2-ac4d-c3566859bff1
+    encryption: none
+    network: tcp
+
+  - name: "VLESS-3"
+    type: vless
+    server: 91.149.219.117
+    port: 36891
+    uuid: 2ec2483d-0a43-41be-a670-b0c5a42d5cf6
+    encryption: none
+    network: tcp
+
+  - name: "VLESS-4"
+    type: vless
+    server: 94.156.116.14
+    port: 52979
+    uuid: 798d2e93-cbf7-4831-885a-ffc561714781
+    encryption: none
+    network: tcp
+
+  # -------- VMESS (gRPC) --------
+  - name: "VMESS-1"
+    type: vmess
+    server: 94.156.116.29
+    port: 58418
+    uuid: edf14dc8-b3e7-4664-b76c-7cbb312a3cac
+    alterId: 0
+    cipher: auto
+    network: grpc
+
+  - name: "VMESS-2"
+    type: vmess
+    server: 94.156.116.213
+    port: 30098
+    uuid: 9d779f75-989b-4828-9681-b2b29459ec5f
+    alterId: 0
+    cipher: auto
+    network: grpc
+
+  - name: "VMESS-3"
+    type: vmess
+    server: 91.149.219.117
+    port: 33382
+    uuid: b9b564b2-9ad9-45f9-b42a-9f075e557d83
+    alterId: 0
+    cipher: auto
+    network: grpc
+
+  - name: "VMESS-4"
+    type: vmess
+    server: 94.156.116.14
+    port: 55608
+    uuid: 16db8582-c4c4-41e6-93e8-e719130f7324
+    alterId: 0
+    cipher: auto
+    network: grpc
+
+####################
+# PROXY GROUPS
+####################
 proxy-groups:
-- name: AUTO
-  type: url-test
-  url: http://www.gstatic.com/generate_204
-  interval: 300
-  tolerance: 50
-  proxies:
-  - MPconnection
-  - MPconnection_1
-  - MPconnection_2
-  - MPconnection_3
-  - MPconnection_4
-  - MPconnection_5
-  - MPconnection_6
-  - MPconnection_7
-  - MPconnection_8
-  - MPconnection_9
-  - MPconnection_10
-  - MPconnection_11
-  - MPconnection_12
-  - MPconnection_13
-  - MPconnection_14
-  - MPconnection_15
-  - MPconnection_16
-  - MPconnection_17
-  - MPconnection_18
-  - MPconnection_19
-  - MPconnection_20
-  - MPconnection_21
-  - MPconnection_22
-  - MPconnection_23
-  - MPconnection_24
-  - MPconnection_25
-  - MPconnection_26
-  - MPconnection_27
-  - MPconnection_28
-  - MPconnection_29
-  - MPconnection_30
-  - MPconnection_31
-  - MPconnection_32
-  - MPconnection_33
-  - MPconnection_34
-  - MPconnection_35
-  - MPconnection_36
-  - MPconnection_37
-  - MPconnection_38
-  - MPconnection_39
-  - MPconnection_40
-  - MPconnection_41
-  - MPconnection_42
-  - MPconnection_43
-  - MPconnection_44
-  - MPconnection_45
-  - MPconnection_46
-  - MPconnection_47
-  - MPconnection_48
-  - MPconnection_49
-  - MPconnection_50
-  - MPconnection_51
-- name: PROXY
-  type: select
-  proxies:
-  - AUTO
-  - MPconnection
-  - MPconnection_1
-  - MPconnection_2
-  - MPconnection_3
-  - MPconnection_4
-  - MPconnection_5
-  - MPconnection_6
-  - MPconnection_7
-  - MPconnection_8
-  - MPconnection_9
-  - MPconnection_10
-  - MPconnection_11
-  - MPconnection_12
-  - MPconnection_13
-  - MPconnection_14
-  - MPconnection_15
-  - MPconnection_16
-  - MPconnection_17
-  - MPconnection_18
-  - MPconnection_19
-  - MPconnection_20
-  - MPconnection_21
-  - MPconnection_22
-  - MPconnection_23
-  - MPconnection_24
-  - MPconnection_25
-  - MPconnection_26
-  - MPconnection_27
-  - MPconnection_28
-  - MPconnection_29
-  - MPconnection_30
-  - MPconnection_31
-  - MPconnection_32
-  - MPconnection_33
-  - MPconnection_34
-  - MPconnection_35
-  - MPconnection_36
-  - MPconnection_37
-  - MPconnection_38
-  - MPconnection_39
-  - MPconnection_40
-  - MPconnection_41
-  - MPconnection_42
-  - MPconnection_43
-  - MPconnection_44
-  - MPconnection_45
-  - MPconnection_46
-  - MPconnection_47
-  - MPconnection_48
-  - MPconnection_49
-  - MPconnection_50
-  - MPconnection_51
+
+  - name: "AUTO-BEST"
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - SS-1
+      - SS-2
+      - SS-3
+      - VLESS-1
+      - VLESS-2
+      - VLESS-3
+      - VLESS-4
+      - VMESS-1
+      - VMESS-2
+      - VMESS-3
+      - VMESS-4
+
+  - name: "MANUAL"
+    type: select
+    proxies:
+      - AUTO-BEST
+      - SS-1
+      - SS-2
+      - SS-3
+      - VLESS-1
+      - VLESS-2
+      - VLESS-3
+      - VLESS-4
+      - VMESS-1
+      - VMESS-2
+      - VMESS-3
+      - VMESS-4
+      - DIRECT
+
+####################
+# RULES
+####################
 rules:
-- MATCH,PROXY
+  - GEOIP,IR,DIRECT
+  - MATCH,MANUAL
